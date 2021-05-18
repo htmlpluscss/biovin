@@ -1,93 +1,85 @@
 	<footer class="footer">
 
-		<div class="footer__wrap">
+		<div class="footer__top">
 
-			<div class="footer__col">
+			<div class="center">
 
-				<h3 class="footer__head h5">
-					Menu
-				</h3>
+				<div class="footer__flex">
 
-				<ul class="footer__menu">
+					<div class="footer__col">
 
-					<li><a href="/mission/">Mission and values</a></li>
-					<li><a href="/treatments/">Treatments</a></li>
-					<li><button class="button" type="button" data-modal="reserve-your-stay">Reserve your stay</button></li>
-					<li><a href="/hub/">Hive Hub</a></li>
+						<div class="footer__logo">
 
-				</ul>
+							<a href="/" title="{{ site }}">
 
-			</div>
+								<picture>
 
-			<div class="footer__col">
+									<source srcset="/img/logo--footer.webp 1x, {{ path }}/logo--footer@2x.webp 2x" type="image/webp">
+									<source srcset="/img/logo--footer.png 1x, {{ path }}/logo--footer@2x.png 2x">
 
-				<h3 class="footer__head h5">
-					Locations
-				</h3>
+									<img src="/img/logo--footer.png" alt="{{ site }}" width="120" height="50" loading="eager">
 
-				<ul class="footer__menu">
+								</picture>
 
-					<li><a href="/portugal/">Portugal</a></li>
-					<li><a href="/malta/">Malta</a></li>
-					<li><a href="/" data-soon="(soon)">London</a></li>
-					<li><a href="/" data-soon="(soon)">Byron Bay</a></li>
+							</a>
 
-				</ul>
+						</div>
 
-			</div>
+						<ul class="footer__menu">
 
-			<div class="footer__col">
+							<li>
+								<a href="/">Политика конфиденциальности</a>
+							</li>
 
-				<h3 class="footer__head h5">
-					Company
-				</h3>
+							<li>
+								<a href="/">Согласие на обработку персональных данных</a>
+							</li>
 
-				<ul class="footer__menu">
+						</ul>
 
-					<li><a href="/press/">Press</a></li>
-					<li><a href="/faq/">FAQ</a></li>
-					<li><a href="/contact/">Contact us</a></li>
+					</div>
 
-				</ul>
+					<div class="footer__col">
 
-			</div>
+						<div class="footer__contact">
 
-			<div class="footer__col">
+							<svg width="36" height="36" viewBox="0 0 36 36">
+								<path d="M7.96 7.32a3.35 3.35 0 014.94.17l2.74 3.24a3.28 3.28 0 01-.21 4.43l-.03.03c.8 1.04 1.65 2.02 2.56 2.93l.19.18c.97.98 2.04 1.9 3.18 2.77a3.28 3.28 0 014.43-.21L29 23.59a3.35 3.35 0 01.17 4.94l-1.72 1.73a5.02 5.02 0 01-5.7.9 34.22 34.22 0 01-9.66-6.8l-.19-.18c-2.76-2.77-4.99-5.95-6.6-9.47a4.96 4.96 0 01.92-5.65l1.74-1.74zm2.36 2.35l-1.75 1.75c-.45.45-.54 1.18-.23 1.86a29.35 29.35 0 005.95 8.51l.18.19a30.83 30.83 0 008.67 6.11c.76.36 1.5.27 1.95-.19l1.73-1.73-3.19-2.69-1.96 1.97-1.15-.8c-1.7-1.18-3.3-2.5-4.76-3.96l-.18-.18A32.95 32.95 0 0111.8 16l-.8-1.15 2-2-2.7-3.19zm16.5-3.54c1-.99 2.59-1 3.57-.02a2.52 2.52 0 01-.84 4.1 2.52 2.52 0 01-2.74-.52 2.52 2.52 0 01.02-3.56zm-4.77 4.77c1-.99 2.59-1 3.56-.02a2.52 2.52 0 01-.83 4.1 2.51 2.51 0 01-2.75-.52 2.52 2.52 0 01.02-3.56z"/>
+							</svg>
 
-				<h3 class="footer__head h5">
-					Research
-				</h3>
+							<div class="footer__contact-link">
 
-				<ul class="footer__menu">
+								<a href="tel:+79995555615">
+									+7 (999) 555 56 15
+								</a>
 
-					<li><a href="/publications/">Publications</a></li>
-					<li><a href="/collaborators/">Collaborators</a></li>
+							</div>
 
-				</ul>
+						</div>
 
-			</div>
+					</div>
 
-			<div class="footer__col footer__col--subscribe">
+					<div class="footer__col">
 
-				<h3 class="footer__head h5">
-					Subscribe to our newsletter
-				</h3>
+						<div class="footer__contact">
 
-				<form action="/" class="footer__form form">
+							<svg width="36" height="36" viewBox="0 0 36 36">
+								<path d="M27 10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+								<path d="M25.5 7.5h-15a3 3 0 00-3 3v15a3 3 0 003 3h15a3 3 0 003-3v-15a3 3 0 00-3-3zm-15-3a6 6 0 00-6 6v15a6 6 0 006 6h15a6 6 0 006-6v-15a6 6 0 00-6-6h-15z"/>
+								<path d="M18 22.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9zm0 3a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"/>
+							</svg>
 
-					<input type="email" name="email" class="input" placeholder="Enter your email" required="required">
+							<div class="footer__contact-link">
 
-					<button class="button" aria-label="Send">
-						<svg width="24" height="24" viewBox="0 0 24 24">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M20.93 14.9a.5.5 0 00.7-.09l2-2.5a.5.5 0 000-.62l-2-2.5a.5.5 0 10-.77.62l1.34 1.69H.76a.5.5 0 000 1H22.2l-1.34 1.69a.5.5 0 00.07.7z"/>
-						</svg>
-					</button>
+								<a href="https://www.instagram.com/biovin" target="_blank" rel="nofollow noopener" title="{{ site }} instagram">
+									instagram.com/biovin
+								</a>
 
-				</form>
+							</div>
 
-				<div class="footer__social">
+						</div>
 
-{% include "template/social.html" %}
+					</div>
 
 				</div>
 
@@ -95,20 +87,15 @@
 
 		</div>
 
-		<hr>
+		<div class="footer__copyright">
 
-		<div class="footer__wrap">
+			<div class="center">
 
-			<ul class="footer__policy">
+				<p>
+					OOO Biovin ИП Фролова Марина Викторовна © 2021
+				</p>
 
-				<li><a href="/">Terms and conditions</a></li>
-				<li><a href="/">Privacy policy</a></li>
-
-			</ul>
-
-			<p class="footer__copyright">
-				All Rights Reserved. 2021 © Hive LTD.
-			</p>
+			</div>
 
 		</div>
 

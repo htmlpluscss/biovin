@@ -4,10 +4,13 @@
 	--bg: #fff;
 	--green: green;
 	--pink: #ee3675;
+	--pink_d: #ffdfe9;
+	--pink_f: #ffe9f0;
 	--border: #fff6f5;
 	--error: red;
 	--transitionDefault: 0s;
 	--light: #637ca0;
+	--med: #a1b4d0;
 	--grad: linear-gradient(303deg, #feeff4 10%, #fffbf5 90%);
 
 	--indent: 105px;

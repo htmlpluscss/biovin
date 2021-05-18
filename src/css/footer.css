@@ -1,12 +1,39 @@
 .footer {
 
 	flex-shrink: 0;
+	position: relative;
+	background-image: var(--grad);
 
-	&__wrap {
+	&__top {
+
+		padding: 70px 0;
+
+		@media ($smWidth) {
+
+			padding: 30px 0;
+
+		}
+
+	}
+
+	&__logo {
+
+	}
+
+	&__copyright {
+
+		padding: 25px 0;
+		color: var(--light);
+		font-size: 12px;
+		line-height: 14px;
+		background-color: var(--pink_f);
+
+	}
+
+	&__flex {
 
 		display: flex;
 		justify-content: space-between;
-		padding: 24px 0;
 
 		@media ($mdWidth) {
 
@@ -16,70 +43,7 @@
 
 		@media ($smWidth) {
 
-			padding: 12px 0;
-
-			& ~ & {
-
-				padding: 0 0 16px;
-
-			}
-
-		}
-
-	}
-
-	&__policy {
-
-		display: flex;
-		font-size: 14px;
-		line-height: 19px;
-		font-weight: 300;
-		letter-spacing: -0.01em;
-		order: 2;
-
-		@media ($smWidth) {
-
-			font-size: 12px;
 			display: block;
-			width: 100%;
-			margin: 6px 0;
-
-			li {
-
-				margin: 6px 0;
-
-			}
-
-		}
-
-		li {
-
-			margin-left: 20px;
-
-		}
-
-		a {
-
-			color: var(--dark);
-
-		}
-
-
-	}
-
-	&__copyright {
-
-		font-weight: 300;
-		font-size: 14px;
-		line-height: 19px;
-		letter-spacing: -0.01em;
-		order: 1;
-		color: var(--dark);
-
-		@media ($smWidth) {
-
-			font-size: 12px;
-			order: 3;
 
 		}
 
@@ -87,53 +51,21 @@
 
 	&__col {
 
-		@media ($mdWidth) {
-
-			min-width: 196px;
-			padding-right: 24px;
-
-		}
-
-		@media ($smWidth) {
-
-			min-width: 138px;
-			width: 138px;
-
-		}
-
-		&--subscribe {
-
-			width: 408px;
-
-			@media ($mdWidth) {
-
-				width: 100%;
-				order: -1;
-				margin-top: -12px;
-				margin-bottom: 12px;
-				padding-bottom: 36px;
-				border-bottom: 1px solid var(--line);
-
-			}
-
-			@media ($smWidth) {
-
-				width: 100%;
-				margin-top: 0;
-
-			}
-
-		}
-
 	}
 
-	&__head {
+	&__contact {
 
-		margin: 24px 0;
+		svg {
 
-		@media ($smWidth) {
+			fill-rule: evenodd;
 
-			margin: 24px 0 12px;
+		}
+
+		&-link {
+
+			font-weight: 800;
+			font-size: 26px;
+			margin: 22px 0;
 
 		}
 
@@ -141,118 +73,25 @@
 
 	&__menu {
 
+		font-size: 12px;
+		line-height: 16px;
+
 		li {
 
-			margin: 12px 0;
-			display: flex;
-			align-items: center;
+			margin-top: 20px;
 
 		}
 
-		a, button {
+		a {
 
-			position: relative;
-			color: var(--color);
-			font-size: 12px;
-			line-height: 20px;
-			letter-spacing: 0.081em;
-			text-transform: uppercase;
+			color: var(----med);
+			text-decoration: underline;
 
-			@media ($desktop) {
+			&:hover {
 
-				&:hover {
-
-					&::before {
-
-						clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
-
-					}
-
-				}
-
-				&::before {
-
-					transform-origin: 50% 100%;
-					transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
-					clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
-					content: '';
-					background-color: var(--color);
-
-					position: absolute;
-					width: 100%;
-					height: 1px;
-					bottom: -3px;
-					left: 0;
-					pointer-events: none;
-
-				}
+				text-decoration: none;
 
 			}
-
-			&[data-soon] {
-
-				pointer-events: none;
-
-				&::after {
-
-					font-size: 8px;
-					color: var(--dark);
-					margin-left: 5px;
-					content: attr(data-soon);
-					vertical-align: bottom;
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&__form {
-
-		position: relative;
-		margin-top: -6px;
-
-		@media ($mdWidth) {
-
-			max-width: 312px;
-
-		}
-
-		@media ($smWidth) {
-
-			max-width: 240px;
-			margin-top: 14px;
-
-		}
-
-		.input {
-
-			background-color: transparent;
-			border-bottom-color: var(--line);
-
-		}
-
-		.button {
-
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-
-		}
-
-	}
-
-	&__social {
-
-		margin-top: 36px;
-
-		@media ($smWidth) {
-
-			margin-top: 24px;
 
 		}
 

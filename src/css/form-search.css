@@ -1,0 +1,49 @@
+.form-search {
+
+	position: relative;
+
+	.input {
+
+		border-color: #fff;
+		height: 32px;
+		padding: 4px 12px;
+		line-height: 20px;
+		border-radius: 6px;
+
+		@media ($desktop) {
+
+			font-size: 14px;
+
+		}
+
+		&::placeholder {
+
+			color: #a1b4d0;
+
+		}
+
+
+	}
+
+	.button {
+
+		position: absolute;
+		width: 56px;
+		height: 32px;
+		top: 0;
+		right: 0;
+		background-color: var(--pink);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+
+		svg {
+
+			fill: #fff;
+
+		}
+
+	}
+
+}

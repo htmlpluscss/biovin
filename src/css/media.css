@@ -6,13 +6,6 @@
 
 }
 
-.visible-lg {
-
-	display: block;
-
-}
-
-
 .center {
 
 	margin: 0 auto;
@@ -24,16 +17,6 @@
 
 @media ($desktop) {
 
-
-}
-
-@media (min-width: 1300px) {
-
-	:root {
-
-		--indent: 60px;
-
-	}
 
 }
 
@@ -53,7 +36,7 @@
 
 	.center {
 
-		padding: 0;
+		width: 750px;
 
 	}
 
@@ -81,7 +64,8 @@
 
 	.center {
 
-		width: 520px;
+		width: 560px;
+		padding: 0 20px;
 
 	}
 

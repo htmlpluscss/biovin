@@ -2,6 +2,7 @@
 
 	display: flex;
 	white-space: nowrap;
+	margin: -10px;
 
 	@media ($mdWidth) {
 
@@ -11,111 +12,12 @@
 
 	&__item {
 
-		margin: 12px 15px;
-		font-size: 12px;
-		line-height: 20px;
-		letter-spacing: 0.081em;
-		text-transform: uppercase;
-		display: flex;
+		margin: 10px;
 
-		@media ($mdWidth) {
+		&--current {
 
-			margin: 12px 0;
-			display: block;
-
-		}
-
-		&--sep {
-
-			padding-left: 30px;
-			border-left: 1px solid var(--line);
-
-			@media ($mdWidth) {
-
-				padding: 0;
-				border: 0;
-				margin: 0;
-				display: block;
-
-				&::before {
-
-					width: 24px;
-					height: 1px;
-					content: '';
-					display: block;
-					margin-bottom: 12px;
-					background-color: var(--line);
-
-				}
-
-			}
-
-		}
-
-		&--sub {
-
-			@media ($mdWidth) {
-
-				&.is-open {
-
-					.menu__sub {
-
-						display: block;
-
-					}
-
-					& > .menu__link {
-
-						opacity: .5;
-
-						svg {
-
-							line + line {
-
-								stroke: none;
-
-							}
-
-						}
-
-					}
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&__item--sub {
-
-		@media ($desktop) {
-
-			margin-right: 26px;
-
-			svg {
-
-				stroke: var(--color);
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				right: -11px;
-				margin: auto;
-
-			}
-
-		}
-
-		@media ($mdWidth) {
-
-			svg {
-
-				stroke: var(--color);
-				margin-bottom: 2px;
-				display: inline-block;
-
-			}
+			--light: var(--pink);
+			pointer-events: none;
 
 		}
 
@@ -124,16 +26,16 @@
 	&__link {
 
 		font-size: 12px;
-		line-height: 20px;
-		letter-spacing: 0.081em;
+		line-height: 16px;
+		font-weight: 800;
 		text-transform: uppercase;
-		color: var(--color);
-		position: relative;
-		display: block;
+		color: var(--light);
 
 		@media ($desktop) {
 
 			&:hover {
+
+				--light: var(--color);
 
 				&::before {
 
@@ -150,259 +52,16 @@
 				transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
 				clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
 				content: '';
-				background-color: var(--color);
+				background-color: var(--light);
 
 				position: absolute;
 				width: 100%;
 				height: 1px;
-				bottom: -3px;
+				bottom: 0;
 				left: 0;
 				pointer-events: none;
 
 			}
-
-		}
-
-		@media ($mdWidth) {
-
-			line-height: 20px;
-
-		}
-
-		&[data-soon] {
-
-			pointer-events: none;
-
-			&::after {
-
-				font-size: 8px;
-				color: var(--dark);
-				content: attr(data-soon);
-
-			}
-
-		}
-
-	}
-
-	@media ($desktop) {
-
-		&__item--sub:hover > &__link svg {
-
-			line + line {
-
-				stroke: none;
-
-			}
-
-		}
-
-		&__item--sub:hover &__sub {
-
-			opacity: 1;
-			max-height: 512px;
-
-		}
-
-	}
-
-	&__sub {
-
-		@media ($desktop) {
-
-			position: absolute;
-			top: 100%;
-			left: -15px;
-			z-index: 1;
-			max-height: 0;
-			overflow: hidden;
-			opacity: 0;
-			transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
-
-		}
-
-		@media ($mdWidth) {
-
-			margin-left: 12px;
-			display: none;
-
-		}
-
-	}
-
-}
-
-.second-menu {
-
-	padding: 30px var(--indent);
-	position: relative;
-	background-color: var(--color);
-	margin-left: calc(var(--indent) * -1);
-	margin-right: calc(var(--indent) * -1);
-
-	@media ($desktop) {
-
-		display: flex;
-
-	}
-
-	&__head {
-
-		display: flex;
-		align-items: baseline;
-		flex-shrink: 0;
-		flex-grow: 1;
-
-	}
-
-	&__title {
-
-		color: var(--bg);
-
-	}
-
-	&__body {
-
-		display: flex;
-		flex-shrink: 0;
-
-		@media ($mdWidth) {
-
-			margin: 16px 0 -12px;
-			margin-left: calc(var(--indent) * -1);
-			margin-right: calc(var(--indent) * -1);
-			overflow-x: auto;
-			padding: 0 var(--indent) 10px;
-
-		}
-
-		@media ($smWidth) {
-
-			margin-top: 12px;
-			margin-bottom: -22px;
-
-		}
-
-	}
-
-	&__date {
-
-		font-weight: 300;
-		font-size: 16px;
-		line-height: 20px;
-		letter-spacing: -0.01em;
-		color: rgba(252, 252, 252, .5);
-		display: flex;
-
-		&::before {
-
-			content: '';
-			width: 1px;
-			height: 20px;
-			margin: 0 15px;
-			transform: rotate(30deg);
-			background-color: var(--line);
-
-		}
-
-	}
-
-	&__list {
-
-		display: flex;
-
-	}
-
-	&__item {
-
-		white-space: nowrap;
-		display: flex;
-		align-items: center;
-
-		& + & {
-
-			margin-left: 20px;
-
-		}
-
-	}
-
-	&__btns {
-
-		display: flex;
-		align-items: center;
-		flex-shrink: 0;
-		margin-left: 30px;
-		height: 24px;
-		border-left: 1px solid var(--line);
-
-		@media ($mdWidth) {
-
-			padding-right: var(--indent);
-
-		}
-
-		@media ($smWidth) {
-
-			margin-left: 20px;
-
-		}
-
-	}
-
-	&__link {
-
-		font-size: 12px;
-		line-height: 20px;
-		height: 20px;
-		letter-spacing: 0.081em;
-		text-transform: uppercase;
-		display: block;
-		position: relative;
-		color: var(--bg);
-
-		&.button {
-
-			margin-left: 30px;
-			height: 20px;
-
-			@media ($smWidth) {
-
-				margin-left: 20px;
-
-			}
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				&::before {
-
-					transform: scale3d(1, 1, 1);
-					clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
-
-				}
-
-			}
-
-		}
-
-		&::before {
-
-			transform-origin: 50% 100%;
-			transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
-			clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
-			content: '';
-			background-color: var(--bg);
-
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			bottom: -3px;
-			left: 0;
-			pointer-events: none;
 
 		}
 

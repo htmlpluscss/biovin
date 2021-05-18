@@ -40,8 +40,8 @@ const w3cjs            = require('gulp-w3cjs');
 
 let config             = null;
 
-const site             = 'HIVE';
-const domain           = 'hive.wndrbase.com';
+const site             = 'BIOVIN';
+const domain           = 'biovin.wndrbase.com';
 
 try {
 
@@ -68,18 +68,7 @@ gulp.task('html', () => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
-			verifyMessage: (type, message) => {
-
-				// prevent logging error message
-				if(message.indexOf('Attribute “loading” not allowed on element “img” at this point.') === 0) return false;
-
-				if(message.indexOf('iframe') !== -1) return false;
-
-				// allow message to pass through
-				return true;
-			}
-		}))
+		.pipe(w3cjs())
 		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
@@ -175,8 +164,8 @@ gulp.task('ftp', () => {
 
 	const f = filter('**/*.html', {restore: true});
 
-	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
-//	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
+//	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
+	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
