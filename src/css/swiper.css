@@ -1,0 +1,232 @@
+/**
+ * Swiper 6.4.15
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2021 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: February 18, 2021
+ */
+
+.swiper-container-style {
+
+	position: relative;
+
+	.swiper-container {
+
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		list-style: none;
+		padding: 0;
+		z-index: 1;
+
+	}
+
+	.swiper-scrollbar {
+
+		margin-top: 36px;
+		position: relative;
+		background-color: var(--line);
+		height: 2px;
+
+		&-drag {
+
+			position: absolute;
+			height: 2px;
+			top: 0;
+			left: 0;
+			content: '';
+			background-color: var(--color);
+			transition: left 1s cubic-bezier(.215,.61,.355,1);
+
+		}
+
+	}
+
+	.swiper-container-no-flexbox .swiper-slide {
+
+		float: left;
+
+	}
+
+	.swiper-wrapper {
+
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		transition-property: transform;
+
+	}
+
+	.swiper-container-android .swiper-slide,
+	.swiper-wrapper {
+
+		transform: translate3d(0px, 0, 0);
+
+	}
+
+	.swiper-slide {
+
+		flex-shrink: 0;
+		width: 100%;
+		position: relative;
+		transition-property: transform;
+
+	}
+
+	.swiper-controls {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+
+	}
+
+	.swiper-navigation {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+	}
+
+	.swiper-button {
+
+		&-prev,
+		&-next {
+
+			z-index: 2;
+			position: relative;
+			pointer-events: auto;
+
+			width: 48px;
+			height: 48px;
+			background-color: var(--color);
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				fill: var(--dark);
+				transition: var(--transitionDefault);
+
+			}
+
+			@media ($desktop) {
+
+				&:hover svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+		}
+
+		&-prev {
+
+
+
+		}
+
+		&-next {
+
+
+		}
+
+	}
+
+	.swiper-pagination {
+
+		transition: 300ms opacity;
+		transform: translate3d(0, 0, 0);
+		z-index: 4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		left: 2px;
+
+		.button {
+
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			transition: var(--transitionDefault);
+			margin-right: 13px;
+			opacity: .5;
+			pointer-events: auto;
+
+			&.is-active {
+
+				transform: scale(1.5);
+				opacity: 1;
+
+			}
+
+		}
+
+	}
+
+	.swiper-notification {
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		opacity: 0;
+		z-index: -1000;
+
+	}
+
+	/* Auto Height */
+	.swiper-container-autoheight,
+	.swiper-container-autoheight .swiper-slide {
+
+		height: auto;
+
+	}
+
+	.swiper-container-autoheight .swiper-wrapper {
+
+		align-items: flex-start;
+		transition-property: transform, height;
+
+	}
+
+	/* fade*/
+
+	.swiper-container-fade .swiper-slide {
+
+		pointer-events: none;
+		transition-property: opacity;
+
+	}
+
+	.swiper-container-fade .swiper-slide-active {
+
+		pointer-events: auto;
+		z-index: 1;
+
+	}
+
+
+}

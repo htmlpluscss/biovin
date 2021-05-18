@@ -1,0 +1,94 @@
+.page-press {
+
+	&__box {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -24px;
+
+		@media ($mdWidth) {
+
+			margin: -12px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
+
+		}
+
+	}
+
+	&__item {
+
+		margin: 24px;
+		width: 408px;
+
+		@media ($mdWidth) {
+
+			width: calc(50% - 24px);
+			margin: 12px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 12px auto;
+			max-width: 100%;
+			width: 408px;
+
+		}
+
+	}
+
+	&__img {
+
+		display: block;
+		margin-bottom: 24px;
+
+		@media ($mdWidth) {
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+	&__date {
+
+		font-size: 12px;
+		line-height: 20px;
+		margin: 6px 0;
+		display: block;
+		letter-spacing: 0.081em;
+		text-transform: uppercase;
+		color: var(--dark);
+
+	}
+
+	&__title {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		margin-bottom: 12px;
+
+		a {
+
+			padding-right: 26px;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%232A293D' stroke='%23FCFCFC' stroke-width='.5' d='M13.35 7.84l-7.17 7.18L5 13.84l7.17-7.17H5.85V5h9.17v9.17h-1.67V7.84z'/%3E%3C/svg%3E");
+
+		}
+
+	}
+
+}

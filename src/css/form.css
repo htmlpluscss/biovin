@@ -1,0 +1,756 @@
+fieldset {
+
+	border: 0;
+	min-width: 0;
+	display: block;
+	position: relative;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+}
+
+legend {
+
+	display: table;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+}
+
+.btn,
+.button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: var(--transitionDefault);
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: inherit;
+	line-height: inherit;
+	color: transparent;
+	text-align: center;
+	white-space: nowrap;
+	display: block;
+	appearance: none;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&:disabled {
+
+		pointer-events: none;
+
+	}
+
+}
+
+.btn {
+
+	padding: 0 28px;
+	height: 56px;
+	font-size: 12px;
+	line-height: 56px;
+	font-weight: 400;
+	color: var(--bg);
+	border-radius: 0;
+	letter-spacing: 0.081em;
+	text-transform: uppercase;
+	background-color: var(--color);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			color: var(--color);
+			background-color: var(--ligth);
+
+		}
+
+	}
+
+	@media ($mdWidth) {
+
+		padding: 0 24px;
+		height: 44px;
+		line-height: 44px;
+
+	}
+
+	&:disabled {
+
+		background-color: rgba(var(--colorRGB), .2);
+
+	}
+
+	&--back {
+
+		padding: 0 !important;
+		width: 60px;
+		background-color: #fff;
+		box-shadow: inset 0 0 0 1px var(--color);
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: var(--color);
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			width: 50px;
+
+		}
+
+	}
+
+	&--arrow {
+
+		color: var(--color);
+		background-color: #fff;
+		padding: 0 60px 0 24px;
+		box-shadow: inset 0 0 0 1px var(--color);
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			right: 24px;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--color);
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			padding: 0 60px 0 24px;
+			height: 56px;
+			line-height: 56px;
+
+		}
+
+	}
+
+	&--light {
+
+		height: 44px;
+		line-height: 44px;
+		color: var(--color);
+		background-color: rgba(var(--ligthRGB), 0.3);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: var(--ligth);
+
+			}
+
+		}
+
+	}
+
+}
+
+.input {
+
+	height: 43px;
+	line-height: 19px;
+
+	padding: 12px 0;
+
+	font-size: 14px;
+	font-weight: 300;
+	color: var(--color);
+
+	width: 100%;
+	font-family: inherit;
+	position: relative;
+	appearance: none;
+	display: block;
+	filter: none;
+	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
+
+	border-radius: 0;
+	border: 0;
+	border-bottom: 1px solid var(--border);
+	background-color: #fff;
+
+	letter-spacing: -0.01em;
+
+	&::-ms-clear {
+
+		display: none;
+
+	}
+
+	&::placeholder {
+
+		color: var(--color);
+		opacity: .4;
+
+	}
+
+	textarea& {
+
+		height: 92px;
+		resize: none;
+
+	}
+
+	@media ($desktop) {
+
+		&:hover {
+
+			border-bottom-color: var(--color);
+
+			&::placeholder {
+
+				opacity: 1;
+
+			}
+
+		}
+
+	}
+
+	&:focus {
+
+		outline: none;
+		border-bottom-color: var(--color);
+
+		&::placeholder {
+
+			opacity: .4;
+
+		}
+
+	}
+
+	&:invalid {
+
+		box-shadow: none;
+
+	}
+
+	&:autofill {
+
+		background-color: #fff;
+		box-shadow: none;
+
+	}
+
+}
+
+
+.checkbox {
+
+	display: block;
+	position: relative;
+	cursor: pointer;
+
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	color: rgba(var(--colorRGB), .5);
+
+	&__input {
+
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__input.is-error ~ &__label::before {
+
+		/* border-color: var(--error); */
+
+	}
+
+	&__label {
+
+		display: block;
+		padding-left: 30px;
+
+		a {
+
+			color: inherit;
+			border-bottom: 1px solid;
+			transition: var(--transitionDefault);
+
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
+
+		}
+
+		&::before {
+
+			width: 16px;
+			height: 16px;
+			background-color: #fff;
+			border: 1px solid var(--color);
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+
+		}
+
+	}
+
+	&:hover &__label::before {
+
+
+	}
+
+	&__input[type="checkbox"]:checked + &__label::after {
+
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		top: 5px;
+		left: 5px;
+		content: '';
+		background-color: var(--color);
+
+	}
+
+}
+
+.btn-radio {
+
+	display: flex;
+
+	&__item {
+
+		position: relative;
+		margin-right: 12px;
+
+	}
+
+	&__input {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		appearance: none;
+		opacity: 0.001;
+
+	}
+
+	&__label {
+
+		height: 44px;
+		line-height: 44px;
+		min-width: 72px;
+		padding: 0 24px;
+		color: var(--color);
+		background-color: rgba(var(--ligthRGB), 0.3);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: var(--ligth);
+
+			}
+
+		}
+
+	}
+
+	&__input:checked + &__label {
+
+		color: var(--bg);
+		background-color: var(--color);
+
+	}
+
+}
+
+.select {
+
+	display: block;
+	position: relative;
+
+	width: 100%;
+	background-color: #fff;
+	/* transition: var(--transitionDefault); */
+
+	&--disabled {
+
+		pointer-events: none;
+
+	}
+
+	@media ($desktop) {
+
+		&:hover &__value {
+
+			color: var(--color);
+			border-bottom-color: var(--color);
+
+		}
+
+		&:hover &__arrow {
+
+			opacity: 1;
+
+		}
+
+	}
+
+	&--open {
+
+		z-index: 5;
+
+	}
+
+	&--open &__value {
+
+		border-bottom-color: var(--color);
+
+	}
+
+	&--default &__value {
+
+		color: rgba(var(--colorRGB), .4);
+
+	}
+
+	&__value {
+
+		font-weight: 300;
+		border-bottom: 1px solid var(--border);
+		letter-spacing: -0.01em;
+
+		display: block;
+		position: relative;
+		cursor: pointer;
+		padding: 12px 40px 12px 0;
+		font-size: 14px;
+		line-height: 19px;
+		/* transition: color var(--transitionDefault); */
+		user-select: none;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+
+		&-inner {
+
+			white-space: nowrap;
+			display: block;
+
+		}
+
+		@media ($mdWidth) {
+
+			pointer-events: none;
+
+		}
+
+	}
+
+	&__arrow {
+
+		fill: var(--color);
+		/* transition: var(--transitionDefault); */
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+	}
+
+	select:invalid ~ &__value {
+
+		/* border-bottom-color: var(--error); */
+
+	}
+
+	&__list {
+
+		@media ($mdWidth) {
+
+			/* display: none !important; */
+
+		}
+
+	}
+
+/* down */
+
+	&--down &__arrow {
+
+		width: 10px;
+		height: 10px;
+		opacity: .4;
+
+		line {
+
+			fill: none;
+			stroke: var(--color);
+
+		}
+
+	}
+
+	&--down&--open &__arrow {
+
+		opacity: 1;
+
+		line + line {
+
+			display: none;
+
+		}
+
+	}
+
+	&--down &__list {
+
+		display: none;
+		margin: 15px 0;
+
+		&-item {
+
+			padding: 6px 0;
+
+		}
+
+	}
+
+	&--down&--open &__list {
+
+		display: block;
+
+	}
+
+/* scroll */
+
+	&--scroll &__arrow {
+
+		width: 12px;
+		height: 6px;
+
+	}
+
+	&--scroll&--open &__arrow {
+
+		transform: scaleY(-1);
+
+	}
+
+	&--scroll&--open &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+
+	}
+
+	&--scroll &__list {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: var(--bg);
+		opacity: 0;
+		overflow: hidden;
+		z-index: 1;
+		border: 12px solid transparent;
+		pointer-events: none;
+		transform: translate3d(0, 12px, 0);
+		/* transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s; */
+		max-height: 280px;
+		overflow-y: auto;
+
+		scrollbar-width: thin;
+		scrollbar-color: var(--color) rgba(var(--colorRGB), .1);
+
+		&::-webkit-scrollbar {
+
+			width: 4px;
+			border-radius: 0;
+			background-color: rgba(var(--colorRGB), .1);
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 0;
+			background-color: var(--color);
+
+		}
+
+	}
+
+	&--flipped&--scroll &__list {
+
+		top: auto;
+		bottom: 100%;
+		transform: translate3d(0, -12px, 0);
+
+	}
+
+	&__list-item {
+
+		padding: 6px 12px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: -0.01em;
+		transition: var(--transitionDefault);
+		width: 100%;
+		display: block;
+		white-space: nowrap;
+		text-align: left;
+		color: var(--color);
+
+		small {
+
+			color: var(--dark);
+			font-size: inherit;
+
+		}
+
+		&[value="none"] {
+
+			display: none;
+
+		}
+
+		&:hover {
+
+			color: var(--dark);
+
+		}
+
+	}
+
+	select {
+
+		opacity: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		pointer-events: none;
+		appearance: none;
+
+	}
+
+}
+
+.form {
+
+	&.is-loading {
+
+		pointer-events: none;
+
+	}
+
+	&-booking {
+
+		&__price {
+
+			margin: 30px 0;
+			overflow: hidden;
+
+			&-value {
+
+				display: block;
+				font-size: 24px;
+				line-height: 36px;
+
+			}
+
+			&-pref {
+
+				display: block;
+				font-size: 12px;
+				line-height: 20px;
+				letter-spacing: 0.081em;
+				text-transform: uppercase;
+				color: var(--dark);
+
+			}
+
+		}
+
+	}
+
+}

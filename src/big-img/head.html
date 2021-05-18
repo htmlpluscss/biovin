@@ -1,0 +1,29 @@
+		<div class="page__big-img">
+
+			<picture>
+
+				<source srcset="{{ path }}/big--648.webp" type="image/webp" media="(max-width: 360px)">
+				<source srcset="{{ path }}/big--648.jpg" media="(max-width: 360px)">
+
+				<source srcset="{{ path }}/big--1320.webp" type="image/webp" media="(max-width: 1249px)">
+				<source srcset="{{ path }}/big--1320.jpg" media="(max-width: 1249px)">
+
+				<source srcset="{{ path }}/big--960.webp 1x, {{ path }}/big--1920.webp 2x" type="image/webp">
+				<source srcset="{{ path }}/big--960.jpg 1x, {{ path }}/big--1920.jpg 2x">
+
+				<img src="{{ path }}/big--960.jpg" alt="{{ title }}" width="960" height="420" loading="lazy">
+
+			</picture>
+
+			<div class="page__big-img-btn">
+
+				<button class="btn btn--arrow" type="button" data-modal="book-your-stay">
+					Reserve your stay
+					<svg width="12" height="20" viewBox="0 0 12 20">
+						<path d="M7.53 5.5L12 9.88v1l-4.47 4.37-.7-.71 3.73-3.66H0v-1h10.58L6.83 6.21l.7-.71z"/>
+					</svg>
+				</button>
+
+			</div>
+
+		</div>

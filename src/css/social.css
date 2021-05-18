@@ -1,0 +1,34 @@
+.social {
+
+	display: flex;
+
+	&__item {
+
+		& + & {
+
+			margin-left: 12px;
+
+		}
+
+	}
+
+	&__link {
+
+		width: 20px;
+		height: 20px;
+		display: block;
+
+		&:hover svg {
+
+			opacity: .5;
+
+		}
+
+		@media ($smWidth) {
+
+
+		}
+
+	}
+
+}

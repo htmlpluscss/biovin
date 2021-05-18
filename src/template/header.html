@@ -1,0 +1,34 @@
+	<header class="header">
+
+		<div class="header__wrap">
+
+			<a href="/" class="header__logo" title="{{ site }}">
+
+				<img src="/img/logo.svg" width="112" height="28" alt="{{ site }}">
+
+			</a>
+
+			<nav class="header__menu">
+
+{% include "template/menu.html" %}
+
+			</nav>
+
+			<button class="header__btn btn" type="button" data-modal="talk-with-us" aria-label="Talk with us">
+				<span class="header__btn-text">
+					Talk with us
+				</span>
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M7.69 7.88h7.68M7.69 12.38h5.81M15 10.13H7.69M17.25 10.13h-.56M16.88 14.63v5.13l-4.28-3.32c-.26-.2-.58-.32-.92-.32H5.63a1.5 1.5 0 01-1.5-1.5v-9c0-.82.67-1.5 1.5-1.5h13.5c.82 0 1.5.68 1.5 1.5v9c0 .83-.68 1.5-1.5 1.5h-2.25" stroke="#FCFCFC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+				</svg>
+			</button>
+
+		</div>
+
+		<button class="button btn-menu-toggle" type="button" aria-label="open Menu">
+			<span class="btn-menu-toggle__line btn-menu-toggle__line--top"></span>
+			<span class="btn-menu-toggle__line btn-menu-toggle__line--center"></span>
+			<span class="btn-menu-toggle__line btn-menu-toggle__line--bottom"></span>
+		</button>
+
+	</header>

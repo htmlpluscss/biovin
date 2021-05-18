@@ -1,0 +1,335 @@
+.modal {
+
+	flex-grow: 1;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	z-index: 10;
+	width: 100%;
+	justify-content: flex-end;
+	overflow: hidden;
+	display: flex;
+	max-height: 0;
+
+	&__box {
+
+		width: 528px;
+		max-width: 100%;
+		position: relative;
+		padding: 60px;
+		background-color: #fff;
+		transition: var(--transitionDefault) var(--transitionDefault);
+		transform: translate3d(100%, 0, 0);
+
+		@media ($smWidth) {
+
+			padding: 24px;
+
+		}
+
+		@media ($xsWidth) {
+
+			padding: 10px;
+
+		}
+
+	}
+
+	&__item {
+
+		position: relative;
+
+		@media ($smWidth) {
+
+
+		}
+
+	}
+
+	&__close-btn {
+
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+	}
+
+	&__title {
+
+		margin: 12px 0 36px;
+
+	}
+
+	&__text {
+
+		margin: 36px 0;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+
+		li {
+
+			margin: 12px 0;
+
+		}
+
+	}
+
+	&__btn {
+
+		margin-top: 60px;
+		display: flex;
+
+	}
+
+}
+
+.modal-show {
+
+	.modal {
+
+		max-height: none;
+
+		&__box {
+
+			transform: translate3d(0, 0, 0);
+
+		}
+
+	}
+
+	.wrapper {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		pointer-events: none;
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			z-index: 9;
+			background-color: var(--dark);
+			opacity: .5;
+			animation: var(--transitionDefault) modal;
+
+		}
+
+	}
+
+}
+
+@keyframes modal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+
+.modal-form {
+
+	&__title {
+
+		margin: 12px 0 36px;
+
+	}
+
+	&__inputbox {
+
+		margin: 18px 0;
+		position: relative;
+
+		&--double {
+
+			display: flex;
+			justify-content: space-between;
+
+			.input {
+
+				width: calc(50% - 12px);
+
+			}
+
+		}
+
+	}
+
+	&__text {
+
+		margin: 24px 0;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+
+	}
+
+	&__info {
+
+		background-color: rgba(var(--ligthRGB), 0.4);
+		padding: 24px;
+		margin: 24px 0;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+
+		small {
+
+			display: block;
+			opacity: .6;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 20px;
+
+		}
+
+	}
+
+	&__checkbox {
+
+		margin: 30px 0;
+
+	}
+
+	&__btns {
+
+		display: flex;
+		margin-top: 24px;
+
+		.btn + .btn {
+
+			margin-left: 12px;
+
+		}
+
+	}
+
+	&:invalid &__submit {
+
+		background-color: rgba(var(--colorRGB), .2);
+
+	}
+
+	hr {
+
+		margin: 24px 0;
+		background-color: var(--border);
+
+	}
+
+	&__poll-btn {
+
+		display: flex;
+		justify-content: space-between;
+
+		.btn {
+
+			width: calc(50% - 6px);
+
+		}
+
+	}
+
+}
+
+.modal-poll {
+
+	&__intro {
+
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+
+	}
+
+	&__desc {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		margin: 24px 0 36px;
+
+		p {
+
+			margin: 20px 0;
+
+		}
+
+	}
+
+	&__finish &__desc {
+
+		margin: 15px 0 30px;
+
+		p {
+
+			margin: 0;
+
+		}
+
+	}
+
+	&__group-head {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		color: var(--dark);
+		margin: 12px 0;
+
+	}
+
+	&__question {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		margin: 12px 0 30px;
+
+	}
+
+	&__progress-bar {
+
+		background-color: rgba(192, 180, 166, .2);
+		height: 3px;
+		position: relative;
+		margin: 24px 0;
+
+		span {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: var(--dark);
+
+		}
+
+	}
+
+	&__before-form {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		color: var(--dark);
+
+	}
+
+}

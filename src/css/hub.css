@@ -1,0 +1,311 @@
+.page-hub {
+
+	& > hr {
+
+		margin: 60px 0;
+
+		@media ($smWidth) {
+
+			margin: 48px 0;
+
+		}
+
+	}
+
+	&__title {
+
+		text-align: center;
+		margin: 60px 0 24px;
+
+		&.h2 {
+
+			font-size: 40px;
+			line-height: 40px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 48px 0 24px;
+
+		}
+
+	}
+
+	&__text {
+
+		margin: 24px 0;
+
+		p {
+
+			text-align: center;
+			max-width: 720px;
+			margin: 20px auto;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: -0.01em;
+
+		}
+
+	}
+
+	&__big-img {
+
+		margin: 60px -48px;
+		position: relative;
+
+		@media ($mdWidth) {
+
+			margin: 0;
+
+			img {
+
+				width: auto;
+				height: auto;
+				max-width: 100%;
+
+			}
+
+		}
+
+	}
+
+	&__list-ico {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 30px -24px -18px;
+
+		@media ($smWidth) {
+
+			margin: 30px -10px -18px;
+
+		}
+
+		li {
+
+			width: 256px;
+			text-align: center;
+			border-bottom: 1px solid var(--line);
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: 0.081em;
+			text-transform: uppercase;
+			padding-bottom: 12px;
+			margin: 18px 24px;
+
+			@media ($smWidth) {
+
+				margin: 18px 10px;
+				width: calc(50% - 20px);
+
+			}
+
+			svg {
+
+				fill: var(--dark);
+				stroke: var(--bg);
+				margin: 0 auto 12px;
+
+			}
+
+		}
+
+	}
+
+	&__team {
+
+		margin: -24px -24px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media ($smWidth) {
+
+			margin: 0;
+			display: block;
+
+		}
+
+		&-item {
+
+			width: 256px;
+			margin: 60px 24px 0;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: -0.01em;
+
+			@media ($smWidth) {
+
+				margin: 48px 0 0;
+				width: 100%;
+
+				img {
+
+					margin: auto;
+
+				}
+
+			}
+
+		}
+
+		&-name {
+
+			margin: 48px 0 12px;
+			line-height: 1.33;
+
+			@media ($smWidth) {
+
+				margin-top: 24px;
+
+			}
+
+		}
+
+	}
+
+	&__partner {
+
+		display: flex;
+		justify-content: space-between;
+		margin: 60px 0;
+
+		@media ($mdWidth) {
+
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 36px 0;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 48px 0;
+			display: block;
+
+		}
+
+		&-item {
+
+			width: 180px;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: -0.01em;
+
+			@media ($mdWidth) {
+
+				margin: 24px;
+				width: 256px;
+
+			}
+
+			@media ($smWidth) {
+
+				margin: 24px 0;
+				width: 100%;
+				text-align: center;
+
+			}
+
+		}
+
+		&-logo {
+
+			height: 72px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+
+		&-name {
+
+			margin: 24px 0 12px;
+			line-height: 1.33;
+			text-align: center;
+
+		}
+
+	}
+
+	&__contact {
+
+		display: flex;
+		justify-content: space-between;
+		margin: 24px 0;
+
+		@media ($mdWidth) {
+
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 0;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+		&-item {
+
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: -0.01em;
+			text-align: center;
+			width: 256px;
+
+			@media ($mdWidth) {
+
+				margin: 24px;
+
+			}
+
+			@media ($smWidth) {
+
+				margin: 24px 0;
+				width: 100%;
+
+			}
+
+			svg {
+
+				fill: var(--dark);
+				stroke: var(--bg);
+				margin: 0 auto 24px;
+
+			}
+
+			p {
+
+				margin-top: 24px;
+
+				a {
+
+					color: var(--dark);
+					text-decoration: underline;
+
+					&:hover {
+
+						text-decoration: none;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,20 @@
+:root {
+
+	--color: #073f5f;
+	--bg: #fff;
+	--green: green;
+	--pink: #ee3675;
+	--border: #fff6f5;
+	--error: red;
+	--transitionDefault: 0s;
+	--light: #637ca0;
+	--grad: linear-gradient(303deg, #feeff4 10%, #fffbf5 90%);
+
+	--indent: 105px;
+
+}
+
+$desktop: (min-width: 1250px);
+$mdWidth: (max-width: 1249px);
+$smWidth: (max-width: 727px);
+$xsWidth: (max-width: 359px);

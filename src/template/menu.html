@@ -1,0 +1,100 @@
+{% set menu = [
+
+	{
+		name : "Mission and values",
+		link : "/mission"
+	},
+	{
+		name : "Treatments",
+		link : "/treatments"
+	},
+	{
+		name : "Locations",
+		sub  : [
+			{
+				name : "Portugal",
+				link : "/portugal"
+			},
+			{
+				name : "Malta",
+				link : "/malta"
+			},
+			{
+				name : "London",
+				soon : true
+			},
+			{
+				name : "Byron Bay",
+				soon : true
+			}
+		]
+	},
+	{
+		name : "Reserve your stay",
+		modal : "reserve-your-stay"
+	},
+	{
+		name : "Hive Hub",
+		link : "/hub"
+	},
+	{
+		name : "Are you a good fit?",
+		sep  : true,
+		modal : "are-you-a-good-fit"
+	}
+
+] %}
+
+					<ul class="menu">
+
+{% for item in menu %}
+
+						<li class="menu__item{% if item.sep %} menu__item--sep{% endif %}{% if item.sub %} menu__item--sub{% endif %}">
+
+	{% if item.modal %}
+
+							<button class="button menu__link" type="button" data-modal="{{ item.modal }}">
+								{{ item.name }}
+							</button>
+
+	{% elif item.sub %}
+
+							<span class="menu__link">
+
+								{{ item.name }}
+
+								<svg width="6" height="6" viewBox="0 0 6 6">
+									<line x1="0" y1="3" x2="6" y2="3"/>
+									<line x1="3" y1="0" x2="3" y2="6"/>
+								</svg>
+
+							</span>
+
+							<ul class="menu__sub">
+
+		{% for sub in item.sub %}
+
+								<li class="menu__item">
+
+									<a href="{{ sub.link }}/" class="menu__link"{% if sub.soon %} data-soon="(soon)"{% endif %}>
+										{{ sub.name }}
+									</a>
+
+								</li>
+		{% endfor %}
+
+							</ul>
+
+	{% else %}
+
+							<a href="{{ item.link }}/" class="menu__link">
+								{{ item.name }}
+							</a>
+
+	{% endif %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>

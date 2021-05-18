@@ -1,0 +1,27 @@
+.scroll-observer {
+
+	display: flex;
+	justify-content: center;
+
+	&__item {
+
+		flex-shrink: 0;
+
+	}
+
+	&.is-scroll {
+
+		justify-content: flex-start;
+		overflow-x: scroll;
+
+		&::after {
+
+			width: var(--indent);
+			content: '';
+			flex-shrink: 0;
+
+		}
+
+	}
+
+}
