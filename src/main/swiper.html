@@ -1,0 +1,107 @@
+	<section class="main-swiper swiper-container-style">
+
+		<div class="swiper-container swiper-container--main">
+
+			<div class="swiper-wrapper main-swiper__list">
+
+{% set list = [
+
+	{
+		img : "l-carnitine",
+		link : "/",
+		cat  : "Slim",
+		name : "L-carnitine",
+		text : "Защищает мыщцы от разрушений, сжигает жир и повышает выносливость, улучшает работу сердечно-сосудистой системы"
+	},
+	{
+		img : "tartrate",
+		link : "/",
+		cat  : "L-Carnitine",
+		name : "Tartrate",
+		text : "За уникальные свойства L карнитин называют витамином роста и активно используют в качестве сжигателя жира."
+	},
+	{
+		img : "650mg",
+		link : "/",
+		cat  : "creatine",
+		name : "650 mg",
+		text : "Способствует увеличению мышечной массы, силы и выносливости."
+	},
+	{
+		img : "derma",
+		link : "/",
+		cat  : "collagen",
+		name : "Derma",
+		text : "Коллаген с гиалуроновой кислотой оказывает двойное положительное воздействие на кожу, волосы и ногти."
+	},
+	{
+		img : "bcaa",
+		link : "/",
+		cat  : "2:1:1",
+		name : "BCAA",
+		text : "Для набора мышечной массы, для похудения, для восстановления, для синтеза аланина и глютамина."
+	},
+	{
+		img : "protein",
+		link : "/",
+		cat  : "bar",
+		name : "Protein",
+		text : "Здоровая альтернатива шоколадным сладостям!"
+	}
+
+] %}
+
+{% for item in list %}
+
+				<article class="swiper-slide{% if loop.first === false %} hide{% endif %}">
+
+					<div class="center">
+
+						<div class="main-swiper__item">
+
+							<div class="main-swiper__content">
+
+								<h2 class="main-swiper__title">
+									{{ item.name }} <small class="main-swiper__cat">{{ item.cat }}</small>
+								</h2>
+
+								<p class="main-swiper__text">
+									{{ item.text }}
+								</p>
+
+								<div class="main-swiper__btn">
+
+									<a href="{{ item.link }}" class="btn">
+										подробнее
+									</a>
+
+								</div>
+
+							</div>
+
+							<a href="{{ item.link }}" class="main-swiper__img">
+
+								<picture>
+
+									<source srcset="/img/main/swiper/{{ item.img }}--563x751.webp 1x, /img/main/swiper/{{ item.img }}--1126x1502.webp 2x" type="image/webp">
+									<source srcset="/img/main/swiper/{{ item.img }}--563x751.jpg 1x, /img/main/swiper/{{ item.img }}--1126x1502.jpg 2x">
+
+									<img src="/img/main/swiper/{{ item.img }}--563x751.jpg" alt="{{ item.name }}" loading="lazy" width="563" height="751">
+
+								</picture>
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+			</div>
+
+		</div>
+
+	</section>

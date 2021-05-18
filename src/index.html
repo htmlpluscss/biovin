@@ -2,21 +2,20 @@
 
 {% set description = "We are creating access to life changing integrated therapies for mental, emotional and physical health around the world" %}
 
-{% set ogImage = "img/home/bg.jpg" %}
-{% set ogImage256 = "img/home/mobile.jpg" %}
+{% set headerMod = "home" %}
 
 {% set preloadImage = [
 	{
 		media: "(max-width: 360px)",
-		img : "/img/home/mobile.webp"
+		img : "/img/main/swiper/l-carnitine--563x751.webp"
 	},
 	{
 		media: "(min-width: 361px) and (max-width: 1249px)",
-		img : "/img/home/tablet.webp"
+		img : "/img/main/swiper/l-carnitine--563x751.webp"
 	},
 	{
 		media: "(min-width: 1250px)",
-		img : "/img/home/bg.webp"
+		img : "/img/main/swiper/l-carnitine--563x751.webp"
 	}
 ] %}
 
@@ -24,25 +23,10 @@
 
 {% block content %}
 
-	<div class="page-home center">
-
-		<div class="page-home__inner">
-
-			<h1 class="h2">
-				We are creating access to life changing integrated therapies for mental, emotional and physical health around the world
-			</h1>
-
-			<p>
-				Hive is at the epicenter of where luxury and science come together
-			</p>
-
-			<a href="/treatments/" class="btn">
-				Learn more
-			</a>
-
-		</div>
-
-
-	</div>
+{% include "main/swiper.html" %}
+{% include "main/category-cards.html" %}
+{% include "main/shops.html" %}
+{% include "main/review.html" %}
+{% include "main/form.html" %}
 
 {% endblock %}

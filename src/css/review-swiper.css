@@ -1,0 +1,167 @@
+.review-swiper {
+
+	margin: var(--indent) 0;
+
+	&__title {
+
+		text-align: center;
+		margin-bottom: 40px;
+
+	}
+
+	&__wrap {
+
+		margin: 0 -16px;
+		position: relative;
+
+		.swiper-controls {
+
+			@media (min-width: 1300px) {
+
+				left: -24px;
+				right: -24px;
+
+			}
+
+			@media (min-width: 1336px) {
+
+				left: -36px;
+				right: -36px;
+
+			}
+
+			@media (min-width: 1440px) {
+
+				left: -86px;
+				right: -86px;
+
+			}
+
+		}
+
+	}
+
+	&__item {
+
+		width: 416px !important;
+		display: flex;
+
+	}
+
+	&__inner {
+
+		box-shadow: 0px 0px 16px rgba(155, 155, 184, 0.16);
+		border-radius: 12px;
+		padding: 32px 26px;
+		margin: 16px;
+
+	}
+
+	&__head {
+
+		display: flex;
+		margin-bottom: 14px;
+		align-items: center;
+
+	}
+
+	&__img {
+
+		width: 76px;
+		height: 76px;
+		flex-shrink: 0;
+		margin-right: 22px;
+
+		img {
+
+			border-radius: 50%;
+
+		}
+
+	}
+
+	&__stars {
+
+		display: flex;
+
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 1px;
+		margin: 6px 0 4px;
+
+		span {
+
+			color: var(--med);
+
+		}
+
+		&::before {
+
+			width: 90px;
+			height: 18px;
+			margin-left: -3px;
+			margin-right: 12px;
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='18' viewBox='0 0 180 18' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='s' d='M9 14l-2.26 1.24a1.5 1.5 0 01-2.2-1.56l.44-2.74-1.92-1.97a1.5 1.5 0 01.84-2.53l2.6-.4 1.14-2.41a1.5 1.5 0 012.72 0l1.14 2.41 2.6.4a1.5 1.5 0 01.84 2.53l-1.92 1.97.45 2.74a1.5 1.5 0 01-2.2 1.56L9 13.99z'/%3E%3Cg fill='%23EE3675'%3E%3Cuse href='%23s' x='0'/%3E%3Cuse href='%23s' x='18'/%3E%3Cuse href='%23s' x='36'/%3E%3Cuse href='%23s' x='54'/%3E%3Cuse href='%23s' x='72'/%3E%3C/g%3E%3Cg fill='%23FFDFE9'%3E%3Cuse href='%23s' x='90'/%3E%3Cuse href='%23s' x='108'/%3E%3Cuse href='%23s' x='126'/%3E%3Cuse href='%23s' x='144'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+		}
+
+		&--4::before {
+
+			background-position: -18px 0;
+
+		}
+
+		&--3::before {
+
+			background-position: -36px 0;
+
+		}
+
+		&--2::before {
+
+			background-position: -54px 0;
+
+		}
+
+		&--1::before {
+
+			background-position: -72px 0;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 14px;
+		line-height: 22px;
+		color: var(--light);
+
+	}
+
+	&__all {
+
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		line-height: 24px;
+
+		a {
+
+			text-decoration: underline;
+			color: var(--pink);
+
+			&:hover {
+
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+}

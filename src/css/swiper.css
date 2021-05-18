@@ -113,7 +113,6 @@
 
 			width: 48px;
 			height: 48px;
-			background-color: var(--color);
 
 			svg {
 
@@ -123,8 +122,7 @@
 				right: 0;
 				bottom: 0;
 				margin: auto;
-				fill: var(--dark);
-				transition: var(--transitionDefault);
+				fill: var(--med);
 
 			}
 
@@ -132,7 +130,7 @@
 
 				&:hover svg {
 
-					fill: #fff;
+					fill: var(--color);
 
 				}
 

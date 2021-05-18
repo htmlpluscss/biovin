@@ -1,0 +1,100 @@
+.main-swiper {
+
+	position: relative;
+	padding: 167px 0 105px;
+
+	&::before {
+
+		position: absolute;
+		width: 1320px;
+		top: 0;
+		left: calc(50% - 1320px/2 - 300px);
+		bottom: 0;
+		content: '';
+		border-bottom-right-radius: 436px;
+		background-image: var(--grad);
+
+	}
+
+	.swiper-controls {
+
+		bottom: 147px;
+		width: 1420px;
+		max-width: 100%;
+		margin: auto;
+
+	}
+
+	.swiper-container-initialized .swiper-slide {
+
+		filter: blur(5px);
+
+		&-active {
+
+			filter: blur(0);
+			transition: var(--transitionDefault);
+
+		}
+
+	}
+
+	.swiper-container {
+
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='796' viewBox='0 0 180 796'%3E%3Cmask id='a' width='161' height='708' x='0' y='0' maskUnits='userSpaceOnUse'%3E%3Cpath fill='%23FFE1EB' d='M0 530.73v-28.5l80.5-60.55 80.5 60.55v28.5l-80.5-60.55L0 530.73zM0 265.72v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 265.72zM0 707.4v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 707.4z'/%3E%3Cpath fill='%23FFE1EB' d='M0 442.4v-28.5l80.5-60.55L161 413.9v28.5l-80.5-60.56L0 442.4zM0 177.38v-28.5l80.5-60.54 80.5 60.55v28.5l-80.5-60.56L0 177.38zM0 619.07v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 558.5 0 619.07z'/%3E%3Cpath fill='%23FFE1EB' d='M0 354.06v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 293.5 0 354.06zM0 89.05v-28.5L80.5 0 161 60.55v28.5L80.5 28.5 0 89.05z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath fill='%23FFE9F0' d='M0-3h161v799H0z'/%3E%3C/g%3E%3C/svg%3E");
+		background-position: top;
+		background-repeat: no-repeat;
+
+	}
+
+	&__item {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__content {
+
+		width: 486px;
+		padding: 100px 0;
+
+	}
+
+	&__title {
+
+		font-weight: 600;
+		font-size: 82px;
+		line-height: 99px;
+		margin-bottom: 28px;
+
+		small {
+
+			display: block;
+			color: var(--pink);
+			font-family: 'Playfair Display';
+			font-size: 82px;
+			font-weight: 900;
+			line-height: 99px;
+
+		}
+
+	}
+
+	&__text {
+
+		margin: 28px 0 34px;
+		font-size: 21px;
+		line-height: 33px;
+		color: var(--light);
+
+	}
+
+	&__btn {
+
+		width: 245px;
+
+	}
+
+
+
+}

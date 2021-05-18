@@ -1,0 +1,99 @@
+	<section class="review-swiper">
+
+		<div class="center">
+
+			<h2 class="review-swiper__title h1">
+				Отзывы о нас
+			</h2>
+
+			<div class="review-swiper__wrap swiper-container-style">
+
+				<div class="swiper-container swiper-container--review">
+
+					<div class="swiper-wrapper review-swiper__list">
+
+{% set list = [
+
+	{
+		img : "JaneRotanson",
+		name : "Елена Иванова",
+		star : 5,
+		text : "Как только увидела эту новинку от Biovin в продаже, сразу же заказала на пробу. В одной бутылке 25 порций, разбавляю на 100 мл воды. Вкус очень приятный, слегка сладенький, с кислинкой. Принимаю за полчаса до тренировки и полна сил и энергии) Надеюсь, поможет избавиться от парочки лишних килограммов 🤗"
+	},
+	{
+		img : "FranPerez",
+		name : "Анна Петрова",
+		star : 4,
+		text : "Приобрела л-карнитин для ускорения похудения. Потому что он улучшает роботоспособность, имеет быстрое действие. Так же вкус не приторный. В бутылке 20 порций, нужно принимать по 25мг +крышечка для измерения мг в помощь. Принимаю перед тренировкой. Доставка быстрая. Советую 👍."
+	},
+	{
+		img : "JaneRotanson",
+		name : "Татьяна Сергеева",
+		star : 5,
+		text : "Доставка очень быстрая. Принимаю перед тренировкой. Вкус сладкий, но не приторный. Бутылки хватает достаточно на долго. Станет отличным дополнением для ваших тренировок. Советую его всем"
+	}
+
+] %}
+
+{% for item in list %}
+
+						<article class="swiper-slide review-swiper__item">
+
+							<div class="review-swiper__inner">
+
+								<div class="review-swiper__head">
+
+									<div class="review-swiper__img">
+
+										<picture>
+
+											<source srcset="/img/review/swiper/{{ item.img }}--76x76.webp 1x, /img/review/swiper/{{ item.img }}--152x152.webp 2x" type="image/webp">
+											<source srcset="/img/review/swiper/{{ item.img }}--76x76.jpg 1x, /img/review/swiper/{{ item.img }}--152x152.jpg 2x">
+
+											<img src="/img/review/swiper/{{ item.img }}--76x76.jpg" alt="{{ item.name }}" loading="lazy" width="76" height="76">
+
+										</picture>
+
+									</div>
+
+									<div class="review-swiper__details">
+
+										<h2 class="review-swiper__name h4">
+											{{ item.name }}
+										</h2>
+
+										<div class="review-swiper__stars review-swiper__stars--{{ item.star }}">
+											{{ item.star }},0<span>/5</span>
+										</div>
+
+									</div>
+
+								</div>
+
+								<p class="review-swiper__text">
+									{{ item.text }}
+								</p>
+
+							</div>
+
+						</article>
+
+{% endfor %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="review-swiper__all">
+
+				<a href="/">
+					Показать все
+				</a>
+
+			</div>
+
+		</div>
+
+	</section>

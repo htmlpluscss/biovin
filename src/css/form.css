@@ -66,11 +66,11 @@ legend {
 
 .btn {
 
-	padding: 0 43px;
+	padding: 0 44px;
 	height: 42px;
 	font-size: 12px;
 	line-height: 42px;
-	font-weight: 800;
+	font-weight: 600;
 	color: var(--bg);
 	border-radius: 6px;
 	text-transform: uppercase;
@@ -121,7 +121,7 @@ legend {
 
 	height: 40px;
 	line-height: 20px;
-	padding: 10px;
+	padding: 8px;
 	font-size: 16px;
 	color: var(--color);
 
@@ -135,7 +135,8 @@ legend {
 
 	background-color: #fff;
 	border: 2px solid var(--border);
-	border-radius: 3px;
+	border-radius: 6px;
+	transition: var(--transitionDefault);
 
 	textarea& {
 
@@ -171,7 +172,7 @@ legend {
 
 	&::placeholder {
 
-		color: var(--grey);
+		color: var(--med);
 		opacity: 1;
 		font-size: 14px;
 
@@ -197,7 +198,7 @@ legend {
 	&:focus {
 
 		outline: none;
-		border-color: var(--blue);
+		border-color: var(--pink);
 
 	}
 

@@ -18,6 +18,8 @@
 
 	&__logo {
 
+		mix-blend-mode: darken;
+
 	}
 
 	&__copyright {
@@ -63,7 +65,7 @@
 
 		&-link {
 
-			font-weight: 800;
+			font-weight: 600;
 			font-size: 26px;
 			margin: 22px 0;
 
@@ -84,7 +86,7 @@
 
 		a {
 
-			color: var(----med);
+			color: var(--med);
 			text-decoration: underline;
 
 			&:hover {

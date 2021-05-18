@@ -7,21 +7,12 @@
 		border-color: #fff;
 		height: 32px;
 		padding: 4px 12px;
-		line-height: 20px;
-		border-radius: 6px;
 
 		@media ($desktop) {
 
 			font-size: 14px;
 
 		}
-
-		&::placeholder {
-
-			color: #a1b4d0;
-
-		}
-
 
 	}
 
