@@ -21,8 +21,8 @@
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
 			  main = swipe.classList.contains('swiper-container--main'),
-			  review = swipe.classList.contains('swiper-container--review'),
-			  productGalleryPreview = swipe.classList.contains('swiper-container--gallery-preview');
+			  cards = swipe.classList.contains('swiper-container--cards'),
+			  product = swipe.classList.contains('swiper-container--product');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -59,20 +59,55 @@
 
 		}
 
-		if (review) {
+		if (cards) {
 
 			toggleSwipe = () => {
 
 				toggleSwipe = false;
 
+				if( window.innerWidth < 768 && count == 1 ) {
+
+					return;
+
+				}
+
+				else if( window.innerWidth < 1250 && count < 3 ) {
+
+					return;
+
+				}
+
+				else if ( window.innerWidth >= 1250 && count <= 3 ) {
+
+					return;
+
+				}
+
 				swipe.parentNode.appendChild(swipeControls);
+
+				swipe.parentNode.classList.add('swiper-container-style');
 
 				new Swiper(swipe, {
 					loop: true,
-					slidesPerView : 3,
 					navigation: {
 						nextEl: swipeNext,
 						prevEl: swipePrev
+					},
+					pagination: {
+						el: swipeNav,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1
+						},
+						768: {
+							slidesPerView: 2
+						},
+						1250: {
+							slidesPerView: 3
+						}
 					}
 				});
 
@@ -112,69 +147,74 @@
 
 		}
 
-		if (productGalleryPreview) {
+		if (product) {
 
 			toggleSwipe = () => {
 
-				let initialSlide = 0,
-					slidesPerView = 5,
-					spaceBetween = 20;
+				resetSwipe();
 
-				swipe.parentNode.appendChild(swipeControls);
-
-				Array.from(items, (el,index) => {
-
-					if(el.classList.contains('is-current')) {
-
-						initialSlide = index;
-
-					}
-
-				});
-
-				toggleSwipe = false;
 				swipe.parentNode.classList.add('swiper-container-style');
+				swipeControls.classList.remove('hide');
 
-				if(swipe.classList.contains('is-style-use')){
+				if(window.innerWidth < 768) {
 
-					slidesPerView = 3;
-					spaceBetween = 0;
+					swipe.appendChild(swipeControls);
+
+					swipeNav.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						pagination: {
+							el: swipeNav,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
 
 				}
+				else {
 
-				const box = swipe.closest('.swiper-gallery-preview'),
-					  big = box.querySelectorAll('.swiper-gallery-preview__big-item');
+					swipe.parentNode.appendChild(swipeControls);
 
-				mySwipe = new Swiper(swipe, {
-					loop: true,
-					slideActiveClass: 'is-current',
-					direction: 'vertical',
-					slidesPerView : slidesPerView,
-					spaceBetween: spaceBetween,
-					slideToClickedSlide: true,
-					initialSlide: initialSlide,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					on: {
-						slideChange : () => {
+					swipeBtns.classList.remove('hide');
 
-							Array.from(big, (img,index) => img.classList.toggle('hide', swipe.swiper.realIndex !== index));
+					let initialSlide = 0;
+
+					Array.from(items, (el,index) => {
+
+						if(el.classList.contains('is-current')) {
+
+							initialSlide = index;
 
 						}
-					},
-					breakpoints: {
-						320: {
-							slidesPerView: 3,
-							spaceBetween: 8
+
+					});
+
+					const box = swipe.closest('.product-gallery'),
+						  big = box.querySelectorAll('.product-gallery__big-item');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						direction: 'vertical',
+						slidesPerView: 4,
+						spaceBetween: 32,
+						slideActiveClass: 'is-current',
+						slideToClickedSlide: true,
+						initialSlide: initialSlide,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
 						},
-						768: {
-							slidesPerView: slidesPerView,
-							spaceBetween: spaceBetween
+						on: {
+							slideChange : () => {
+
+								Array.from(big, (img,index) => img.classList.toggle('hide', swipe.swiper.realIndex !== index));
+
+							}
 						}
-					}
-				});
+					});
+
+				}
 
 			}
 

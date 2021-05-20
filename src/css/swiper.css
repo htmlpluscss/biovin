@@ -25,27 +25,6 @@
 
 	}
 
-	.swiper-scrollbar {
-
-		margin-top: 36px;
-		position: relative;
-		background-color: var(--line);
-		height: 2px;
-
-		&-drag {
-
-			position: absolute;
-			height: 2px;
-			top: 0;
-			left: 0;
-			content: '';
-			background-color: var(--color);
-			transition: left 1s cubic-bezier(.215,.61,.355,1);
-
-		}
-
-	}
-
 	.swiper-container-no-flexbox .swiper-slide {
 
 		float: left;
@@ -86,6 +65,7 @@
 		right: 0;
 		bottom: 0;
 		pointer-events: none;
+		z-index: 3;
 
 	}
 
@@ -160,8 +140,9 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		bottom: 0;
-		left: 2px;
+		bottom: 4px;
+		left: 0;
+		right: 0;
 
 		.button {
 
@@ -169,14 +150,13 @@
 			width: 8px;
 			border-radius: 50%;
 			transition: var(--transitionDefault);
-			margin-right: 13px;
-			opacity: .5;
 			pointer-events: auto;
+			margin: 4px;
+			background-color: var(--med);
 
 			&.is-active {
 
-				transform: scale(1.5);
-				opacity: 1;
+				background-color: var(--pink);
 
 			}
 
@@ -226,5 +206,34 @@
 
 	}
 
+	/* veertical */
+
+	.swiper-container-vertical .swiper-controls {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.swiper-container-vertical > .swiper-wrapper {
+
+		flex-direction: column;
+		height: 100%;
+
+	}
+
+	.swiper-container-pointer-events.swiper-container-vertical {
+
+		touch-action: pan-x;
+
+	}
+
+	.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+
+		scroll-snap-type: y mandatory;
+
+	}
 
 }

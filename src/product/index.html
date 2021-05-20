@@ -1,0 +1,59 @@
+{% set title = "Протеиновые батончики без сахара Protein bar" %}
+
+{% set description = "НОВИНКА! Теперь в шоколадной глазури - белого и темного цвета!!! Biovin Protein Bar - Самый вкусный протеиновый батончик. Здоровая альтернатива шоколадным сладостям! Вкусный перекус для настоящих спортсменов и людей, ведущих активный образ жизни." %}
+
+{% set ogImage = "img/products/bar/og.png" %}
+{% set ogImage256 = "img/products/bar/og256.png" %}
+
+{% set breadcrumbs = ['Сила и восстановление', title] %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/product/gallery/1--656x874.webp"
+	},
+	{
+		media: "(min-width: 361px) and (max-width: 1249px)",
+		img : "/img/product/gallery/1--477x636.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/product/gallery/1--477x636.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="page center">
+
+		<h1 class="page__title h2">
+			{{ title }}
+		</h1>
+
+		<p class="page__stars">
+
+			<span class="stars stars--big stars--5">
+
+				<span class="visuallyhidden">
+					Оценка покупателей 5 звёзд,
+				</span>
+
+			</span>
+
+			<span class="page__review">
+				19 отзывов
+			</span>
+
+		</p>
+
+{% include "product/body.html" %}
+
+{% include "product/related.html" %}
+
+{% include "product/param.html" %}
+
+	</article>
+
+{% endblock %}

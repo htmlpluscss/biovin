@@ -4,6 +4,21 @@
 	flex-wrap: wrap;
 	margin: -18px -16px;
 
+	.swiper-cards & {
+
+		margin: 0;
+		flex-wrap: nowrap;
+
+	}
+
+	.swiper-cards &__item {
+
+		box-shadow: 4px 0 4px rgba(155, 155, 184, 0.08), 0 4px 4px rgba(155, 155, 184, 0.08), 0 0 16px rgba(155, 155, 184, 0.16);
+		width: auto;
+		margin: 0;
+
+	}
+
 	&__item {
 
 		margin: 18px 16px;

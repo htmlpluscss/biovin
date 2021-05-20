@@ -2,9 +2,36 @@
 
 	margin: var(--indent) auto;
 
+	.breadcrumbs + & {
+
+		margin-top: 0;
+
+	}
+
+	.breadcrumbs + & &__title {
+
+		margin: 0;
+
+	}
+
 	&__title {
 
 		margin: 52px 0;
+
+	}
+
+	&__stars {
+
+		display: flex;
+		align-items: center;
+		margin: 12px 0;
+
+	}
+
+	&__review {
+
+		font-size: 12px;
+		color: var(--pink);
 
 	}
 

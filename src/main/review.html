@@ -6,11 +6,11 @@
 				Отзывы о нас
 			</h2>
 
-			<div class="review-swiper__wrap swiper-container-style">
+			<div class="swiper-cards">
 
-				<div class="swiper-container swiper-container--review">
+				<div class="swiper-container swiper-container--cards">
 
-					<div class="swiper-wrapper review-swiper__list">
+					<div class="swiper-wrapper swiper-cards__list review-swiper__list">
 
 {% set list = [
 
@@ -31,15 +31,21 @@
 		name : "Татьяна Сергеева",
 		star : 5,
 		text : "Доставка очень быстрая. Принимаю перед тренировкой. Вкус сладкий, но не приторный. Бутылки хватает достаточно на долго. Станет отличным дополнением для ваших тренировок. Советую его всем"
+	},
+	{
+		img : "FranPerez",
+		name : "Анна Петрова",
+		star : 4,
+		text : "Приобрела л-карнитин для ускорения похудения. Потому что он улучшает роботоспособность, имеет быстрое действие. Так же вкус не приторный. В бутылке 20 порций, нужно принимать по 25мг +крышечка для измерения мг в помощь. Принимаю перед тренировкой. Доставка быстрая. Советую 👍."
 	}
 
 ] %}
 
 {% for item in list %}
 
-						<article class="swiper-slide review-swiper__item">
+						<article class="swiper-slide swiper-cards__item">
 
-							<div class="review-swiper__inner">
+							<div class="review-swiper__item">
 
 								<div class="review-swiper__head">
 
@@ -100,7 +106,7 @@
 
 			<div class="review-swiper__all">
 
-				<a href="/">
+				<a href="/review/">
 					Показать все
 				</a>
 

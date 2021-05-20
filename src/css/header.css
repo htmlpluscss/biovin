@@ -76,6 +76,7 @@
 		font-weight: 600;
 		font-size: 14px;
 		margin-left: 18px;
+		color: var(--color);
 
 		svg {
 

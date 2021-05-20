@@ -9,51 +9,17 @@
 
 	}
 
-	&__wrap {
+	&__list {
 
-		margin: 0 -16px;
-		position: relative;
-
-		.swiper-controls {
-
-			@media (min-width: 1300px) {
-
-				left: -24px;
-				right: -24px;
-
-			}
-
-			@media (min-width: 1336px) {
-
-				left: -36px;
-				right: -36px;
-
-			}
-
-			@media (min-width: 1440px) {
-
-				left: -86px;
-				right: -86px;
-
-			}
-
-		}
+		display: flex;
 
 	}
 
 	&__item {
 
-		width: 416px !important;
-		display: flex;
-
-	}
-
-	&__inner {
-
 		box-shadow: 0px 0px 16px rgba(155, 155, 184, 0.16);
 		border-radius: 12px;
 		padding: 32px 26px;
-		margin: 16px;
 
 	}
 
@@ -105,7 +71,6 @@
 		a {
 
 			text-decoration: underline;
-			color: var(--pink);
 
 			&:hover {
 
@@ -114,6 +79,71 @@
 			}
 
 		}
+
+	}
+
+}
+
+.swiper-cards {
+
+	margin: 0 -16px;
+	position: relative;
+
+	&:not(.swiper-container-style) .swiper-controls {
+
+		display: none;
+
+	}
+
+	.swiper-controls {
+
+		@media (min-width: 1300px) {
+
+			left: -24px;
+			right: -24px;
+
+		}
+
+		@media (min-width: 1336px) {
+
+			left: -36px;
+			right: -36px;
+
+		}
+
+		@media (min-width: 1440px) {
+
+			left: -86px;
+			right: -86px;
+
+		}
+
+	}
+
+	.swiper-pagination {
+
+		display: none;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+
+	}
+
+	&__item {
+
+		width: 416px !important;
+		padding: 16px;
+		display: flex;
+		flex-shrink: 0;
 
 	}
 

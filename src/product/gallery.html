@@ -1,0 +1,60 @@
+			<div class="product-gallery">
+
+				<div class="product-gallery__preview">
+
+					<div class="swiper-container swiper-container--product">
+
+						<ul class="swiper-wrapper product-gallery__list">
+
+{% for img in [1,2,3,4] %}
+
+							<li class="swiper-slide product-gallery__item{% if loop.first %} is-current{% endif %}">
+
+								<a class="product-gallery__link" target="_blank" href="/img/product/gallery/{{ img }}--954x1272.jpg">
+
+									<picture>
+
+										<source srcset="/img/product/gallery/{{ img }}--656x874.webp" type="image/webp" media="(max-width: 360px)">
+										<source srcset="/img/product/gallery/{{ img }}--656x874.jpg" media="(max-width: 360px)">
+
+										<source srcset="/img/product/gallery/{{ img }}--101x135.webp 1x, /img/product/gallery/{{ img }}--202x270.webp 2x" type="image/webp">
+										<source srcset="/img/product/gallery/{{ img }}--101x135.jpg 1x, /img/product/gallery/{{ img }}--202x270.jpg 2x">
+
+										<img src="/img/product/gallery/{{ img }}--101x135.jpg" alt="{{ title }}" loading="eager" width="101" height="135">
+
+									</picture>
+
+								</a>
+
+							</li>
+
+{% endfor %}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<ul class="product-gallery__big">
+
+{% for img in [1,2,3,4] %}
+
+					<li class="product-gallery__big-item{% if loop.first === false %} hide{% endif %}">
+
+						<picture>
+
+							<source srcset="/img/product/gallery/{{ loop.index }}--477x636.webp 1x, /img/product/gallery/{{ loop.index }}--954x1272.webp 2x" type="image/webp">
+							<source srcset="/img/product/gallery/{{ loop.index }}--477x636.jpg 1x, /img/product/gallery/{{ loop.index }}--954x1272.jpg 2x">
+
+							<img src="/img/product/gallery/{{ loop.index }}--477x636.jpg" alt="{{ title }}" loading="lazy" width="477" height="636">
+
+						</picture>
+
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+			</div>

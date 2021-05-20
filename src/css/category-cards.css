@@ -32,6 +32,7 @@
 		text-transform: uppercase;
 		padding: 60px 40px 45px;
 		flex-grow: 1;
+		color: var(--color);
 		transition: var(--transitionDefault);
 		background-image: var(--grad);
 		background-color: var(--bg);

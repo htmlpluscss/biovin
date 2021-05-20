@@ -1,25 +1,24 @@
 .breadcrumbs {
 
-	margin: 34px 0;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 16px;
-	color: var(--grey);
+	margin: 44px 0;
 
 	@media ($smWidth) {
 
 		margin: 24px 0;
-		line-height: 18px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 16px;
+		line-height: 1.2;
+		color: var(--light);
 
 	}
 
 	&__item {
-
-		@media ($smWidth) {
-
-			margin: 5px 0;
-
-		}
 
 		a {
 
@@ -29,8 +28,9 @@
 
 		&::after {
 
-			margin: 0 12px;
+			margin: 0 8px 0 5px;
 			content: '—';
+			font-weight: 600;
 
 		}
 

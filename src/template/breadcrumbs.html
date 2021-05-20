@@ -1,23 +1,27 @@
-	<div class="center">
+	<div class="breadcrumbs">
 
-		<ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<div class="center">
+
+			<ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
 
 {% for item in breadcrumbs %}
 
-			<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+				<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 
-				<a href="/" itemprop="item" class="link">
+					<a href="/" itemprop="item" class="link">
 
-					<span itemprop="name">{{ item }}</span>
+						<span itemprop="name">{{ item }}</span>
 
-				</a>
+					</a>
 
-				<meta itemprop="position" content="{{ loop.index }}">
+					<meta itemprop="position" content="{{ loop.index }}">
 
-			</li>
+				</li>
 
 {% endfor %}
 
-		</ul>
+			</ul>
+
+		</div>
 
 	</div>

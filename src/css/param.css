@@ -1,0 +1,60 @@
+.param {
+
+	margin: 80px 0;
+
+	&__head {
+
+		margin: 38px 0 16px;
+
+	}
+
+	&__column {
+
+		@media ($desktop) {
+
+			column-gap: 42px;
+			column-count: 2;
+			margin-top: -22px;
+
+		}
+
+	}
+
+	&__item {
+
+		display: flex;
+		align-items: baseline;
+		font-size: 14px;
+		line-height: 22px;
+		padding-top: 22px;
+
+	}
+
+	&__dt {
+
+		color: var(--light);
+		flex-grow: 1;
+		display: flex;
+		align-items: flex-end;
+
+		&::after {
+
+			height: 6px;
+			flex-grow: 1;
+			border-top: 2px dotted var(--med);
+			margin: 0 10px;
+			content: '';
+		}
+
+	}
+
+	&__dd {
+
+		font-weight: 600;
+		width: 235px;
+		flex-shrink: 0;
+
+	}
+
+
+}
