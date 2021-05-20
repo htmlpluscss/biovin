@@ -43,58 +43,62 @@
 
 {% for item in list %}
 
-						<article class="swiper-slide swiper-cards__item">
+						<div class="swiper-slide swiper-cards__item">
 
 							<div class="review-swiper__item">
 
-								<div class="review-swiper__head">
+								<article class="review-item">
 
-									<div class="review-swiper__img">
+									<div class="review-item__head">
 
-										<picture>
+										<div class="review-item__img">
 
-											<source srcset="/img/review/swiper/{{ item.img }}--76x76.webp 1x, /img/review/swiper/{{ item.img }}--152x152.webp 2x" type="image/webp">
-											<source srcset="/img/review/swiper/{{ item.img }}--76x76.jpg 1x, /img/review/swiper/{{ item.img }}--152x152.jpg 2x">
+											<picture>
 
-											<img src="/img/review/swiper/{{ item.img }}--76x76.jpg" alt="{{ item.name }}" loading="lazy" width="76" height="76">
+												<source srcset="/img/review/{{ item.img }}--76x76.webp 1x, /img/review/{{ item.img }}--152x152.webp 2x" type="image/webp">
+												<source srcset="/img/review/{{ item.img }}--76x76.jpg 1x, /img/review/{{ item.img }}--152x152.jpg 2x">
 
-										</picture>
+												<img src="/img/review/{{ item.img }}--76x76.jpg" alt="{{ item.name }}" loading="lazy" width="76" height="76">
 
-									</div>
+											</picture>
 
-									<div class="review-swiper__details">
+										</div>
 
-										<h2 class="review-swiper__name h4">
-											{{ item.name }}
-										</h2>
+										<div class="review-item__details">
 
-										<div class="review-swiper__stars">
+											<h2 class="review-item__name h4">
+												{{ item.name }}
+											</h2>
 
-											<span class="stars stars--{{ item.star }}">
+											<div class="review-item__stars">
 
-												<span class="visuallyhidden">
-													Оценка покупателей {{ item.star }} звезд
+												<span class="stars stars--{{ item.star }}">
+
+													<span class="visuallyhidden">
+														Оценка покупателей {{ item.star }} звёзд
+													</span>
+
+													<span class="stars__suf">
+														{{ item.star }},0<span class="color-med">/5</span>
+													</span>
+
 												</span>
 
-												<span class="stars__suf">
-													{{ item.star }},0<span class="color-med">/5</span>
-												</span>
-
-											</span>
+											</div>
 
 										</div>
 
 									</div>
 
-								</div>
+									<p class="review-item__text">
+										{{ item.text }}
+									</p>
 
-								<p class="review-swiper__text">
-									{{ item.text }}
-								</p>
+								</article>
 
 							</div>
 
-						</article>
+						</div>
 
 {% endfor %}
 

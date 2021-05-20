@@ -1,0 +1,35 @@
+{% set title = "Отзывы" %}
+
+{% set description = "Описание страницы Отзывы, 150 - 255 символов" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="page center">
+
+		<h1 class="page__title h2">
+			{{ title }}
+		</h1>
+
+{% include "review/sort.html" %}
+
+		<div class="review">
+
+			<div class="review__list">
+
+{% include "review/list.html" %}
+
+			</div>
+
+			<div class="review__stat">
+
+{% include "review/ratio.html" %}
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

@@ -260,6 +260,7 @@
 
 		width: 477px;
 		flex-grow: 1;
+		position: relative;
 
 		img {
 

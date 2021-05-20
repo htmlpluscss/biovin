@@ -131,6 +131,11 @@
 						prevEl: swipePrev
 					},
 					on: {
+						progress : () => {
+
+							swipe.classList.add('is-blur');
+
+						},
 						slideChange : () => {
 
 							if(mySwipe) {

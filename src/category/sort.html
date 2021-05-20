@@ -1,31 +1,51 @@
-	<div class="sort">
+	<form action="/" class="sort">
 
 		<p class="sort__head">
 			Сортировать:
 		</p>
 
-		<ul class="sort__list">
+		<div class="sort__list">
 
-			<li class="sort__item is-current">
-				<a class="sort__link" href="/">по популярности</a>
-			</li>
+			<label class="sort__item">
 
-			<li class="sort__item">
-				<a class="sort__link" href="/">по цене</a>
-			</li>
+				<input class="sort__input visuallyhidden" type="radio" name="sort" checked="checked">
 
-			<li class="sort__item">
-				<a class="sort__link" href="/">по рейтингу</a>
-			</li>
+				<span class="sort__label">по популярности</span>
 
-			<li class="sort__item">
-				<a class="sort__link" href="/">по размеру скидки</a>
-			</li>
+			</label>
 
-			<li class="sort__item">
-				<a class="sort__link" href="/">по новизне</a>
-			</li>
+			<label class="sort__item">
 
-		</ul>
+				<input class="sort__input visuallyhidden" type="radio" name="sort">
 
-	</div>
+				<span class="sort__label">по цене</span>
+
+			</label>
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="radio" name="sort">
+
+				<span class="sort__label">по рейтингу</span>
+
+			</label>
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="radio" name="sort">
+
+				<span class="sort__label">по размеру скидки</span>
+
+			</label>
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="radio" name="sort">
+
+				<span class="sort__label">по новизне</span>
+
+			</label>
+
+		</div>
+
+	</form>

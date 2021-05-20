@@ -1,0 +1,168 @@
+	<div class="review-list">
+
+{% for item in [1,2,3,4] %}
+
+		<article class="review-list__item">
+
+			<div class="review-item review-item--wide">
+
+				<div class="review-item__img">
+
+					<picture>
+
+						<source srcset="/img/review/JaneRotanson--76x76.webp 1x, /img/review/JaneRotanson--152x152.webp 2x" type="image/webp">
+						<source srcset="/img/review/JaneRotanson--76x76.jpg 1x, /img/review/JaneRotanson--152x152.jpg 2x">
+
+						<img src="/img/review/JaneRotanson--76x76.jpg" alt="Елена Иванова" loading="lazy" width="76" height="76">
+
+					</picture>
+
+				</div>
+
+				<div class="review-item__details">
+
+					<h2 class="review-item__name h4">
+						Елена Иванова
+					</h2>
+
+					<time class="review-item__date" datetime="2020-01-15">
+						15 Января 2020
+					</time>
+
+					<div class="review-item__stars">
+
+						<span class="stars stars--5">
+
+							<span class="visuallyhidden">
+								Оценка покупателей 5 звёзд
+							</span>
+
+							<span class="stars__suf">
+								5,0<span class="color-med">/5</span>
+							</span>
+
+						</span>
+
+					</div>
+
+				</div>
+
+				<blockquote class="review-item__blockquote{% if loop.index === 3 %} review-item__blockquote--line{% endif %}">
+
+					<p class="review-item__text">
+						Как только увидела эту новинку от Biovin в продаже, сразу же заказала на пробу. В одной бутылке 25 порций, разбавляю на 100 мл воды. Вкус очень приятный, слегка сладенький, с кислинкой. Принимаю за полчаса до тренировки и полна сил и энергии) Надеюсь, поможет избавиться от парочки лишних килограммов 🤗
+					</p>
+
+{% if loop.index === 2 or loop.index === 4 %}
+
+					<ul class="review-item__photos">
+
+						<li class="review-item__photos-item">
+
+							<a href="/img/review/photos/1--1024x1024.jpg" target="_blank">
+
+								<picture>
+
+									<source srcset="/img/review/photos/1--111x111.webp 1x, /img/review/photos/1--222x222.webp 2x" type="image/webp">
+									<source srcset="/img/review/photos/1--111x111.jpg 1x, /img/review/photos/1--222x222.jpg 2x">
+
+									<img src="/img/review/photos/1--111x111.jpg" alt="" loading="lazy" width="111" height="111">
+
+								</picture>
+
+							</a>
+
+						</li>
+
+						<li class="review-item__photos-item">
+
+							<a href="/img/review/photos/2--1024x1024.jpg" target="_blank">
+
+								<picture>
+
+									<source srcset="/img/review/photos/2--111x111.webp 1x, /img/review/photos/2--222x222.webp 2x" type="image/webp">
+									<source srcset="/img/review/photos/2--111x111.jpg 1x, /img/review/photos/2--222x222.jpg 2x">
+
+									<img src="/img/review/photos/2--111x111.jpg" alt="" loading="lazy" width="111" height="111">
+
+								</picture>
+
+							</a>
+
+						</li>
+
+						<li class="review-item__photos-item">
+
+							<a href="/img/review/photos/3--1024x1024.jpg" target="_blank">
+
+								<picture>
+
+									<source srcset="/img/review/photos/3--111x111.webp 1x, /img/review/photos/3--222x222.webp 2x" type="image/webp">
+									<source srcset="/img/review/photos/3--111x111.jpg 1x, /img/review/photos/3--222x222.jpg 2x">
+
+									<img src="/img/review/photos/3--111x111.jpg" alt="" loading="lazy" width="111" height="111">
+
+								</picture>
+
+							</a>
+
+						</li>
+
+					</ul>
+
+{% endif %}
+
+				</blockquote>
+
+			</div>
+
+{% if loop.index === 3 %}
+
+			<div class="review-item review-item--wide">
+
+				<div class="review-item__img review-item__img--biovin">
+
+					<picture>
+
+						<source srcset="/img/review/biovin--76x76.webp 1x, /img/review/biovin--152x152.webp 2x" type="image/webp">
+						<source srcset="/img/review/biovin--76x76.png 1x, /img/review/biovin--152x152.png 2x">
+
+						<img src="/img/review/biovin--76x76.png" alt="Biovin" loading="lazy" width="76" height="76">
+
+					</picture>
+
+				</div>
+
+				<div class="review-item__details">
+
+					<h3 class="review-item__name h4">
+						Biovin
+					</h3>
+
+					<time class="review-item__date" datetime="2020-01-15">
+						15 Января 2020
+					</time>
+
+					<p class="review-item__reply">
+						в ответ Елена Иванова
+					</p>
+
+				</div>
+
+				<blockquote class="review-item__blockquote">
+
+					<p class="review-item__text">
+						Добрый день, спасибо вам за выбор наших протеиновых батончиков , так же хотим вам порекомендовать нашу новинку - Л карнитин Biovin , это эффективное средство для снижения веса, и контроля аппетита. Но, подходит лишь для тех кто тренируется. Что бы найти его, введите в поисковике : Л карнитин Biovin и три очень вкусных напитка будут доступны для заказа.
+					</p>
+
+				</blockquote>
+
+			</div>
+
+{% endif %}
+
+		</article>
+
+{% endfor %}
+
+	</div>

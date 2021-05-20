@@ -1,0 +1,73 @@
+	<form action="/" class="sort">
+
+		<p class="sort__head">
+			Сортировать:
+		</p>
+
+		<div class="sort__list">
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="radio" name="sort" checked="checked">
+
+				<span class="sort__label">по дате</span>
+
+			</label>
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="radio" name="sort">
+
+				<span class="sort__label">по рейтингу</span>
+
+			</label>
+
+			<label class="sort__item">
+
+				<input class="sort__input visuallyhidden" type="checkbox" name="photo" checked="checked">
+
+				<span class="sort__label">с фото</span>
+
+			</label>
+
+		</div>
+
+		<div class="sort__right">
+
+			<div class="checkbox-dropdown">
+
+				<button class="checkbox-dropdown__btn button" type="button" data-declension="позиция,позиции,позиций">
+					Товар
+				</button>
+
+				<div class="checkbox-dropdown__list">
+
+					<div class="checkbox-dropdown__scroll">
+
+{% for label in ['L-carnitine Slim','Protein bar','Derma collagen','BCAA 2:1:1','650mg creatine','L-carnitine Tartrate'] %}
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+
+								<span class="checkbox__label">
+									{{ label }}
+								</span>
+
+							</label>
+
+						</div>
+
+{% endfor %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</form>

@@ -14,7 +14,9 @@
 @import url(shops.css);
 @import url(swiper.css);
 @import url(main-swiper.css);
+@import url(swiper-cards.css);
 @import url(review-swiper.css);
+@import url(review.css);
 @import url(form-callback.css);
 
 @import url(page.css);
@@ -26,3 +28,4 @@
 
 @import url(product.css);
 @import url(param.css);
+@import url(checkbox-dropdown.css);

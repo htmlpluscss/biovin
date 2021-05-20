@@ -77,7 +77,18 @@ gulp.task('html', () => {
 gulp.task('html-touch', () => {
 
 	return gulp.src('src/**/index.html')
-		.pipe(touch());
+		.pipe(plumber())
+		.pipe(debug({title: 'html:'}))
+		.pipe(nunjucksRender({
+			data: {
+				url: 'https://' + domain,
+				site: site
+			},
+			path: 'src/'
+		}))
+		.pipe(w3cjs())
+		.pipe(w3cjs.reporter())
+		.pipe(gulp.dest('build'))
 
 });
 
