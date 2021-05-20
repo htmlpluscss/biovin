@@ -1,0 +1,57 @@
+.sort {
+
+	margin: 36px 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__head {
+
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		margin-right: 22px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -11px;
+
+	}
+
+	&__item {
+
+		margin: 11px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--med);
+
+		&.is-current {
+
+			--light: var(--pink);
+			pointer-events: none;
+
+		}
+
+	}
+
+	&__link {
+
+		color: var(--light);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				--light: var(--color);
+
+			}
+
+		}
+
+	}
+
+}

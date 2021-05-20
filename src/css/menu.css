@@ -14,7 +14,7 @@
 
 		margin: 12px;
 
-		&--current {
+		&.is-current {
 
 			--light: var(--pink);
 			pointer-events: none;

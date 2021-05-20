@@ -6,7 +6,7 @@
 	},
 	{
 		name : "Печенья",
-		link : "cookies"
+		link : "cookie"
 	},
 	{
 		name : "Сила и восстановление",
@@ -31,7 +31,7 @@
 
 {% for item in menu %}
 
-						<li class="menu__item{% if item.name === title %} menu__item--current{% endif %}">
+						<li class="menu__item{% if item.name === title %} is-current{% endif %}">
 
 							<a href="/{{ item.link }}/" class="menu__link">
 								{{ item.name }}

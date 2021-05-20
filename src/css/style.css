@@ -16,12 +16,13 @@
 @import url(main-swiper.css);
 @import url(review-swiper.css);
 @import url(form-callback.css);
-/*
-@import url(page-collaborators.css);
-@import url(page-contact.css);
-@import url(page-press.css);
-@import url(page-publications.css);
+
 @import url(page.css);
+@import url(sort.css);
+@import url(product-list.css);
+@import url(stars.css);
+/*
+@import url(page-publications.css);
 @import url(col.css);
 @import url(scroll-observer.css);
 @import url(tabs.css);

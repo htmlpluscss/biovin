@@ -62,8 +62,20 @@
 											{{ item.name }}
 										</h2>
 
-										<div class="review-swiper__stars review-swiper__stars--{{ item.star }}">
-											{{ item.star }},0<span>/5</span>
+										<div class="review-swiper__stars">
+
+											<span class="stars stars--{{ item.star }}">
+
+												<span class="visuallyhidden">
+													Оценка покупателей {{ item.star }} звезд
+												</span>
+
+												<span class="stars__suf">
+													{{ item.star }},0<span class="color-med">/5</span>
+												</span>
+
+											</span>
+
 										</div>
 
 									</div>

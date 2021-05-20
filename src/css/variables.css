@@ -21,3 +21,14 @@ $desktop: (min-width: 1250px);
 $mdWidth: (max-width: 1249px);
 $smWidth: (max-width: 727px);
 $xsWidth: (max-width: 359px);
+
+.color-pink {
+
+	color: var(--pink);
+
+}
+.color-med {
+
+	color: var(--med);
+
+}

@@ -1,0 +1,129 @@
+	<div class="product-list">
+
+{% set list = [
+
+	{
+		img : "bar",
+		name : "Протеиновые батончики <br>без сахара Protein bar",
+		star : 5
+	},
+	{
+		img : "carnitine-kiwi-strawberry",
+		name : "Карнитин L-carnitine Slim",
+		star : 5
+	},
+	{
+		img : "collagen-mango-pear",
+		name : "Коллаген питьевой <br>Derma collagen",
+		star : 4
+	},
+	{
+		img : "creatine-650",
+		name : "Протеиновые батончики <br>без сахара Protein bar",
+		star : 5
+	},
+	{
+		img : "bcaa",
+		name : "Карнитин L-carnitine Slim",
+		star : 5
+	},
+	{
+		img : "collagen-pear-apple",
+		name : "Коллаген питьевой <br>Derma collagen",
+		star : 4
+	}
+
+] %}
+
+{% for item in list %}
+
+		<article class="product-list__item">
+
+			<div class="product-list__img">
+
+				<picture>
+
+					<source srcset="/img/category/{{ item.img }}--384x384.webp 1x, /img/category/{{ item.img }}--768x768.webp 2x" type="image/webp">
+					<source srcset="/img/category/{{ item.img }}--384x384.jpg 1x, /img/category/{{ item.img }}--768x768.jpg 2x">
+
+					<img src="/img/category/{{ item.img }}--384x384.jpg" alt="{{ item.name | striptags(true) }}" loading="lazy" width="384" height="384">
+
+				</picture>
+
+			</div>
+
+			<div class="product-list__body">
+
+				<div class="product-list__row">
+
+					<p class="product-list__price">
+
+						<span class="visuallyhidden">
+							Цена со скидкой
+						</span>
+
+						790
+
+						<span class="visuallyhidden">
+							рублей
+						</span>
+
+					</p>
+
+					<p class="product-list__price-old">
+
+						<span class="visuallyhidden">
+							Цена без скидки
+						</span>
+
+						1 684
+
+						<span class="visuallyhidden">
+							рублей
+						</span>
+
+					</p>
+
+					<p class="product-list__sale">
+
+						<span class="visuallyhidden">
+							Скидка
+						</span>
+
+						-53 %
+
+					</p>
+
+				</div>
+
+				<h2 class="product-list__name h5">
+
+					<a class="product-list__link" href="/">
+						{{ item.name | safe }}
+					</a>
+
+				</h2>
+
+				<p class="product-list__stars">
+
+					<span class="stars stars--{{ item.star }}">
+
+						<span class="visuallyhidden">
+							Оценка покупателей {{ item.star }} звезд,
+						</span>
+
+					</span>
+
+					<span class="product-list__review">
+						19 отзывов
+					</span>
+
+				</p>
+
+			</div>
+
+		</article>
+
+{% endfor %}
+
+	</div>

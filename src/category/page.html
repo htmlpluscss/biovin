@@ -1,0 +1,32 @@
+{% set preloadImage = [
+	{
+		media: "(min-width: 360px)",
+		img : "/img/category/bar--384x384.webp"
+	},
+	{
+		media: "(min-width: 768px)",
+		img : "/img/category/carnitine-kiwi-strawberry--384x384.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/category/collagen-mango-pear--384x384.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="page center">
+
+		<h1 class="page__title h2">
+			{{ title }}
+		</h1>
+
+{% include "category/sort.html" %}
+
+{% include "category/list.html" %}
+
+	</section>
+
+{% endblock %}
