@@ -1,0 +1,72 @@
+	<div class="about-cards center">
+
+		<h2 class="about-cards__title h2">
+			Наши ценности
+		</h2>
+
+		<div class="about-cards__list">
+
+{% for item in [
+
+	{
+		ico : "diet",
+		head : "Широкий ассортимент",
+		text : "Полезные сладости без добавления сахара, витамины для&nbsp;женского здоровья и красоты, спортивные добавки для&nbsp;силы и восстановления, а  также комплексные витамины. "
+	},
+	{
+		ico : "heart",
+		head : "Мы ценим наших клиентов",
+		text : "Мы прислушиваемся к пожеланиям и отзывам наших&nbsp;клиентов и учитываем их при формировании линейки&nbsp;нашей продукции."
+	},
+	{
+		ico : "gluten",
+		head : "Чистый состав",
+		ul   : ["Без сахара","Без ГМО","Без глютена"]
+	},
+	{
+		ico : "calendar",
+		head : "Актуальность",
+		text : "Мы следим за последними трендами и делаем нашу&nbsp;продукцию актуальной и уникальной."
+	}
+
+] %}
+
+			<div class="about-cards__item">
+
+				<img src="/img/about/{{ item.ico }}.svg" alt="{{ item.head }}" loading="lazy" width="46" height="46">
+
+				<h3 class="about-cards__head h5">
+					{{ item.head }}
+				</h3>
+
+	{% if item.text %}
+
+				<p>
+					{{ item.text | safe }}
+				</p>
+
+	{% endif %}
+
+	{% if item.ul %}
+
+				<ul>
+
+		{% for li in item.ul %}
+
+					<li>
+						{{ li }}
+					</li>
+
+		{% endfor %}
+
+				</ul>
+
+	{% endif %}
+
+			</div>
+
+{% endfor %}
+
+		</div>
+
+	</div>

@@ -1,0 +1,114 @@
+.about {
+
+	overflow: hidden;
+
+}
+
+.about-head {
+
+	position: relative;
+	padding: 243px 0 var(--indent);
+
+	&::before {
+
+		position: absolute;
+		width: 1320px;
+		top: 0;
+		left: calc(50% - 1320px/2 - 300px);
+		bottom: 0;
+		content: '';
+		border-bottom-right-radius: 270px;
+		background-image: var(--grad);
+
+	}
+
+	&__title {
+
+		margin-bottom: 30px;
+
+	}
+
+	&__box {
+
+		font-size: 22px;
+		line-height: 36px;
+		display: flex;
+		align-items: center;
+		color: var(--light);
+
+	}
+
+	&__text {
+
+		width: 630px;
+
+	}
+
+	&__logo {
+
+		margin-left: 70px;
+		flex-shrink: 0;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			width: 708px;
+			height: 161px;
+			top: 0;
+			left: -38px;
+			bottom: 0;
+			margin: auto;
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='708' height='161' fill='none' viewBox='0 0 708 161'%3E%3Cmask id='a' width='709' height='161' x='-1' y='0' maskUnits='userSpaceOnUse'%3E%3Cpath fill='%23FFE1EB' d='M176.67 0h28.5l60.55 80.5-60.55 80.5h-28.5l60.56-80.5L176.66 0zM441.68 0h28.5l60.55 80.5-60.55 80.5h-28.5l60.55-80.5L441.68 0zM0 0h28.5l60.55 80.5L28.5 161H0l60.55-80.5L0 0z'/%3E%3Cpath fill='%23FFE1EB' d='M265 0h28.5l60.56 80.5L293.5 161H265l60.56-80.5L265.01 0zM530.02 0h28.5l60.55 80.5L558.5 161h-28.5l60.56-80.5L530.02 0zM88.34 0h28.5l60.54 80.5-60.55 80.5h-28.5l60.56-80.5L88.34 0z'/%3E%3Cpath fill='%23FFE1EB' d='M353.35 0h28.49l60.55 80.5-60.55 80.5h-28.5l60.56-80.5L353.35 0zM618.35 0h28.5l60.55 80.5-60.55 80.5h-28.5l60.56-80.5L618.35 0z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath fill='%23FFE9F0' d='M710.4 0v161h-799V0z'/%3E%3C/g%3E%3C/svg%3E");
+
+		}
+
+	}
+
+}
+
+.about-cards {
+
+	margin: var(--indent) auto;
+
+	&__title {
+
+		margin-bottom: 36px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -16px;
+
+	}
+
+	&__item {
+
+		width: calc(50% - 32px);
+		margin: 16px;
+		padding: 46px 50px 48px 50px;
+		box-shadow: 4px 0px 4px rgba(155, 155, 184, 0.08), 0px 4px 4px rgba(155, 155, 184, 0.08), 0px 0px 49px rgba(155, 155, 184, 0.16);
+		border-radius: 12px;
+
+	}
+
+	&__head {
+
+		margin: 27px 0 5px;
+
+	}
+
+	p, ul {
+
+		font-size: 16px;
+		line-height: 1.4;
+		color: var(--light);
+		max-width: 500px;
+
+	}
+
+}

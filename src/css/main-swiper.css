@@ -1,7 +1,7 @@
 .main-swiper {
 
 	position: relative;
-	padding: 167px 0 105px;
+	padding: 167px 0 var(--indent);
 
 	&::before {
 

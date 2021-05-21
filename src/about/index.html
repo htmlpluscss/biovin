@@ -1,0 +1,19 @@
+{% set title = "О нас" %}
+
+{% set description = "Biovin — производитель полезных перекусов без сахара, продуктов для здоровья и красоты, а также витаминов для улучшения силовых показателей." %}
+
+{% set headerMod = "home" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about">
+
+{% include "about/head.html" %}
+
+{% include "about/cards.html" %}
+
+	</article>
+
+{% endblock %}

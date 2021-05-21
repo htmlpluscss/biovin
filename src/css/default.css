@@ -33,7 +33,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 /* background-image: url(/css/1.png); */
-background-position: center -2px;
+background-position: center 0px;
 }
 
 a {
