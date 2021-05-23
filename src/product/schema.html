@@ -1,0 +1,55 @@
+		<script type="application/ld+json">
+
+			{
+				"@context": "https://schema.org",
+				"@type": "Product",
+				"name": "{{ title }}",
+				"description": "{{ description }}",
+				"image": "{{ url }}/{{ ogImage }}",
+				"url": "{{ url }}/product/",
+				"brand": "biovin",
+				"sku": "id",
+				"gtin13": "глобальный идентификатор товара, например код ISBN, MPN или GTIN8",
+				"offers": {
+					"@type": "Offer",
+					"price": "790",
+					"priceValidUntil": "2020-03-03",
+					"availability": "https://schema.org/InStock",
+					"priceCurrency": "RUB",
+					"url": "{{ url }}/product/"
+				},
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"worstRating": "1",
+					"bestRating" : "5",
+					"ratingValue": "4.8",
+					"reviewCount": "19"
+				},
+				"review": [
+					{
+						"@type": "Review",
+						"author": "Макс Д.",
+						"description": "Хорошие ценники, техники предостаточно, большая официальная гарантия и сервис отработан до самых мелочей. Стиральная машина куплена, прошло все ровно и теперь можно нацеливаться на покупку уже сушилки, причем и модель прямо здесь же выбрали.",
+						"reviewRating": {
+							"@type": "Rating",
+							"worstRating": "1",
+							"bestRating" : "5",
+							"ratingValue": "5"
+						}
+					},
+					{
+						"@type": "Review",
+						"author": "Алексей",
+						"description": "Быстрая обработка заказа и доставк Согласовали окно доставки заранее",
+						"reviewRating": {
+							"@type": "Rating",
+							"worstRating": "1",
+							"bestRating" : "5",
+							"ratingValue": "4"
+						}
+					}
+				]
+
+			}
+
+		</script>

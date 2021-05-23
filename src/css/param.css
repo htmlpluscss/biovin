@@ -14,7 +14,7 @@
 
 			column-gap: 42px;
 			column-count: 2;
-			margin-top: -22px;
+			margin: -11px 0;
 
 		}
 
@@ -26,7 +26,8 @@
 		align-items: baseline;
 		font-size: 14px;
 		line-height: 22px;
-		padding-top: 22px;
+		padding: 11px 0;
+		break-inside: avoid;
 
 	}
 

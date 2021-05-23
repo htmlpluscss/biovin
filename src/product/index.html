@@ -2,6 +2,7 @@
 
 {% set description = "НОВИНКА! Теперь в шоколадной глазури - белого и темного цвета!!! Biovin Protein Bar - Самый вкусный протеиновый батончик. Здоровая альтернатива шоколадным сладостям! Вкусный перекус для настоящих спортсменов и людей, ведущих активный образ жизни." %}
 
+{% set ogArticle = true %}
 {% set ogImage = "img/products/bar/og.png" %}
 {% set ogImage256 = "img/products/bar/og256.png" %}
 
@@ -25,6 +26,8 @@
 {% extends "template/base.html" %}
 
 {% block content %}
+
+{% include "product/schema.html" %}
 
 	<article class="page center">
 
