@@ -4,13 +4,24 @@
 	position: relative;
 	background-image: var(--grad);
 
+	@media ($smWidth) {
+
+		.center {
+
+			width: 100%;
+
+		}
+
+	}
+
 	&__top {
 
 		padding: 70px 0;
 
 		@media ($smWidth) {
 
-			padding: 30px 0;
+			padding: 24px 0 44px;
+			background-color: var(--pink_f);
 
 		}
 
@@ -18,7 +29,18 @@
 
 	&__logo {
 
-		mix-blend-mode: darken;
+		@media ($smWidth) {
+
+			margin-bottom: 20px;
+
+			img {
+
+				width: auto;
+				height: 36px;
+
+			}
+
+		}
 
 	}
 
@@ -29,6 +51,19 @@
 		font-size: 12px;
 		line-height: 14px;
 		background-color: var(--pink_f);
+
+		@media ($smWidth) {
+
+			padding: var(--space) 0;
+			background-image: var(--grad);
+
+		}
+
+		@media ($xsWidth) {
+
+			font-size: 11px;
+
+		}
 
 	}
 
@@ -53,6 +88,12 @@
 
 	&__col {
 
+		@media ($smWidth) {
+
+			margin-bottom: 24px;
+
+		}
+
 	}
 
 	&__contact {
@@ -60,6 +101,13 @@
 		svg {
 
 			fill-rule: evenodd;
+
+			@media ($smWidth) {
+
+				width: 24px;
+				height: 24px;
+
+			}
 
 		}
 
@@ -69,6 +117,14 @@
 			font-size: 26px;
 			margin: 22px 0;
 			--pink: var(--color);
+
+			@media ($smWidth) {
+
+				font-size: 18px;
+				line-height: 25px;
+				margin: 12px 0;
+
+			}
 
 		}
 
@@ -82,6 +138,12 @@
 		li {
 
 			margin-top: 20px;
+
+			@media ($smWidth) {
+
+				margin-top: 12px;
+
+			}
 
 		}
 

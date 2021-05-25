@@ -2,12 +2,39 @@
 
 	margin: var(--indent) 0;
 
+	@media ($smWidth) {
+
+		margin: 0;
+		padding: var(--indent) 0;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(-1);
+			background-image: var(--grad);
+			content: '';
+
+		}
+
+	}
+
 	&__flex {
 
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -16,11 +43,25 @@
 		width: 356px;
 		margin-right: 129px;
 
+		@media ($smWidth) {
+
+			width: auto;
+			margin: 0;
+
+		}
+
 	}
 
 	&__title {
 
 		margin-bottom: 12px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 10px;
+			text-align: center;
+
+		}
 
 	}
 
@@ -30,6 +71,16 @@
 		line-height: 20px;
 		margin-bottom: 36px;
 		color: var(--med);
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 1.4;
+			margin-bottom: 24px;
+			text-align: center;
+			padding: 0 10px;
+
+		}
 
 	}
 
@@ -69,6 +120,18 @@
 		display: flex;
 		justify-content: flex-end;
 
+		@media ($smWidth) {
+
+			margin-top: 24px;
+
+			.btn {
+
+				width: 100%;
+
+			}
+
+		}
+
 	}
 
 	&__img {
@@ -77,6 +140,12 @@
 		height: 456px;
 		position: relative;
 		margin-left: 122px;
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
 
 		img {
 

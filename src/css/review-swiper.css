@@ -2,10 +2,29 @@
 
 	margin: var(--indent) 0;
 
+	@media ($smWidth) {
+
+		margin-bottom: 0;
+		overflow: hidden;
+
+		.swiper-container {
+
+			overflow: visible;
+
+		}
+
+	}
+
 	&__title {
 
 		text-align: center;
 		margin-bottom: 40px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 8px;
+
+		}
 
 	}
 
@@ -21,6 +40,12 @@
 		border-radius: 12px;
 		padding: 32px 26px;
 
+		@media ($smWidth) {
+
+			padding: 20px 20px 22px;
+
+		}
+
 	}
 
 	&__all {
@@ -30,6 +55,12 @@
 		justify-content: center;
 		font-size: 16px;
 		line-height: 24px;
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
 
 		a {
 

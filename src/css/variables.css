@@ -14,12 +14,13 @@
 	--grad: linear-gradient(303deg, #feeff4 10%, #fffbf5 90%);
 
 	--indent: 105px;
+	--space: 16px;
 
 }
 
 $desktop: (min-width: 1250px);
 $mdWidth: (max-width: 1249px);
-$smWidth: (max-width: 727px);
+$smWidth: (max-width: 767px);
 $xsWidth: (max-width: 359px);
 
 .color-pink {

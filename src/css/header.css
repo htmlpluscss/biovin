@@ -23,6 +23,13 @@
 
 	@media ($smWidth) {
 
+		padding: 0;
+
+		.center {
+
+			width: 100%;
+
+		}
 
 	}
 
@@ -34,6 +41,13 @@
 
 		display: flex;
 
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			margin: 0 calc(var(--space) * -1);
+
+		}
+
 	}
 
 	&__logo {
@@ -41,12 +55,52 @@
 		flex-shrink: 0;
 		margin-right: 90px;
 
+		@media ($smWidth) {
+
+			margin: 18px var(--space) 22px;
+
+			img {
+
+				width: 82px;
+				height: 32px;
+
+			}
+
+			.form-search-show & {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	&__search {
 
 		flex-grow: 1;
 		margin: 15px 0;
+
+		@media ($smWidth) {
+
+			margin: 24px 68px 22px 0;
+			display: flex;
+			justify-content: flex-end;
+
+			.form-search-show & {
+
+				flex-grow: 1;
+				margin: 18px var(--space) 22px;
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			margin-right: 56px;
+
+		}
 
 	}
 
@@ -57,6 +111,16 @@
 		display: flex;
 		align-items: center;
 
+		@media ($smWidth) {
+
+			display: none;
+			margin: 0;
+			padding: 18px var(--space);
+			width: 100%;
+			background-image: var(--grad);
+
+		}
+
 	}
 
 	&__instagram {
@@ -64,6 +128,42 @@
 		svg {
 
 			fill-rule: evenodd;
+
+			@media ($smWidth) {
+
+				margin-right: 8px;
+
+			}
+
+			@media ($xsWidth) {
+
+				margin-right: 4px;
+
+			}
+
+		}
+
+		&-text {
+
+			display: none;
+
+			@media ($smWidth) {
+
+				display: block;
+				color: var(--color);
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			display: flex;
+			align-items: center;
+
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 16px;
 
 		}
 
@@ -78,9 +178,29 @@
 		margin-left: 18px;
 		color: var(--color);
 
+		@media ($xsWidth) {
+
+			margin-left: auto;
+
+			svg {
+
+				margin-right: 4px;
+
+			}
+
+		}
+
 		svg {
 
 			margin-right: 8px;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 16px;
+			margin-left: 28px;
 
 		}
 
@@ -90,9 +210,10 @@
 
 		margin: 10px 0;
 
-		@media ($mdWidth) {
+		@media ($smWidth) {
 
 			display: none;
+			margin: 0 calc(var(--space) * -1);
 
 		}
 
@@ -104,26 +225,32 @@
 
 	display: none;
 
-	@media ($mdWidth) {
+	@media ($smWidth) {
 
 		display: block;
-		width: 28px;
-		height: 28px;
+		width: 24px;
+		height: 24px;
 		position: absolute;
-		top: 28px;
-		left: 0;
+		top: 24px;
+		right: var(--space);
+
+		.form-search-show & {
+
+			display: none;
+
+		}
 
 		&__line {
 
 			position: absolute;
-			width: 24px;
-			height: 1px;
+			width: 18px;
+			height: 2px;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
 			margin: auto;
-			background-color: var(--color);
+			background-color: var(--pink);
 			transform: rotate(0deg);
 			will-change: transform;
 			transition: var(--transitionDefault);
@@ -134,6 +261,7 @@
 
 					bottom: 0;
 					transform: rotate(-225deg);
+					background-color: var(--med);
 
 				}
 
@@ -141,6 +269,7 @@
 
 					opacity: 0;
 					transform: rotate(-360deg);
+					background-color: var(--med);
 
 				}
 
@@ -148,6 +277,7 @@
 
 					top: 0;
 					transform: rotate(-315deg);
+					background-color: var(--med);
 
 				}
 
@@ -155,7 +285,7 @@
 
 			&--top {
 
-				bottom: 12px;
+				bottom: 10px;
 
 			}
 
@@ -166,7 +296,7 @@
 
 			&--bottom {
 
-				top: 12px;
+				top: 10px;
 
 			}
 
@@ -174,25 +304,17 @@
 
 	}
 
-	@media ($smWidth) {
-
-		width: 24px;
-		height: 24px;
-		top: 24px;
-
-	}
-
 	@media ($xsWidth) {
-
-		top: 16px;
 
 	}
 
 }
 
-@media ($mdWidth) {
+@media ($smWidth) {
 
 	.menu-show {
+
+		background-image: var(--grad);
 
 		.main,
 		.footer {
@@ -202,6 +324,24 @@
 		}
 
 		.header {
+
+			&__wrap {
+
+				background-color: #fff;
+
+			}
+
+			&__search {
+
+				display: none;
+
+			}
+
+			&__contacts {
+
+				display: flex;
+
+			}
 
 			&__menu {
 

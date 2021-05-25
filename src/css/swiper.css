@@ -152,7 +152,7 @@
 			transition: var(--transitionDefault);
 			pointer-events: auto;
 			margin: 4px;
-			background-color: var(--med);
+			background-color: var(--border);
 
 			&.is-active {
 

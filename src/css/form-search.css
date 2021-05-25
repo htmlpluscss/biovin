@@ -2,11 +2,28 @@
 
 	position: relative;
 
-	.input {
+	@media ($smWidth) {
+
+		.form-search-show & {
+
+			flex-grow: 1;
+
+		}
+
+	}
+
+	&__input {
 
 		border-color: #fff;
+		border-width: 1px;
 		height: 32px;
 		padding: 4px 12px;
+
+		&:focus {
+
+			border-color: var(--pink_d);
+
+		}
 
 		@media ($desktop) {
 
@@ -14,9 +31,21 @@
 
 		}
 
+		@media ($smWidth) {
+
+			display: none;
+
+			.form-search-show & {
+
+				display: block;
+
+			}
+
+		}
+
 	}
 
-	.button {
+	&__submit {
 
 		position: absolute;
 		width: 56px;
@@ -32,6 +61,37 @@
 		svg {
 
 			fill: #fff;
+
+		}
+
+		@media ($smWidth) {
+
+			display: none;
+			width: 52px;
+
+			.form-search-show & {
+
+				display: flex;
+
+			}
+
+		}
+
+	}
+
+	&__show-form {
+
+		display: none;
+
+		@media ($smWidth) {
+
+			display: block;
+
+			.form-search-show & {
+
+				display: none;
+
+			}
 
 		}
 

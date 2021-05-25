@@ -44,6 +44,12 @@
 	font-size: 58px;
 	line-height: 1.2;
 
+	@media ($smWidth) {
+
+		font-size: 20px;
+
+	}
+
 }
 
 .h2 {
@@ -51,6 +57,12 @@
 	font-weight: 600;
 	font-size: 36px;
 	line-height: 1.2;
+
+	@media ($smWidth) {
+
+		font-size: 20px;
+
+	}
 
 }
 
@@ -67,6 +79,13 @@
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 32px;
+
+	@media ($smWidth) {
+
+		font-size: 14px;
+		line-height: 22px;
+
+	}
 
 }
 

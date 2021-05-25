@@ -4,9 +4,10 @@
 	white-space: nowrap;
 	margin: -12px;
 
-	@media ($mdWidth) {
+	@media ($smWidth) {
 
 		display: block;
+		margin: 0;
 
 	}
 
@@ -14,10 +15,23 @@
 
 		margin: 12px;
 
+		@media ($smWidth) {
+
+			margin: 0;
+
+		}
+
 		&.is-current {
 
 			--light: var(--pink);
 			pointer-events: none;
+
+			@media ($smWidth) {
+
+				--light: var(--light);
+				background-color: var(--pink_f);
+
+			}
 
 		}
 
@@ -62,6 +76,13 @@
 				pointer-events: none;
 
 			}
+
+		}
+
+		@media ($smWidth) {
+
+			padding: 22px 16px;
+			display: block;
 
 		}
 

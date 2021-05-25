@@ -89,11 +89,13 @@
 
 				new Swiper(swipe, {
 					loop: true,
+//					autoHeight: true,
 					navigation: {
 						nextEl: swipeNext,
 						prevEl: swipePrev
 					},
 					pagination: {
+						clickable: true,
 						el: swipeNav,
 						bulletClass: 'button',
 						bulletActiveClass: 'is-active'
@@ -119,34 +121,57 @@
 
 			toggleSwipe = () => {
 
-				toggleSwipe = false;
+				resetSwipe();
 
-				const title = document.head.querySelector('title');
+				swipe.parentNode.classList.add('swiper-container-style');
+				swipeControls.classList.remove('hide');
 
-				mySwipe = new Swiper(swipe, {
-					loop: true,
-					simulateTouch: false,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					on: {
-						progress : () => {
+				if(window.innerWidth < 768) {
 
-							swipe.classList.add('is-blur');
+					swipeNav.classList.remove('hide');
 
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						pagination: {
+							clickable: true,
+							el: swipeNav,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				} else {
+
+					const title = document.head.querySelector('title');
+
+					swipeBtns.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						simulateTouch: false,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
 						},
-						slideChange : () => {
+						on: {
+							progress : () => {
 
-							if(mySwipe) {
+								swipe.classList.add('is-blur');
 
-								title.textContent = swipe.swiper.slides[swipe.swiper.activeIndex].querySelector('.main-swiper__title').textContent;
+							},
+							slideChange : () => {
+
+								if(mySwipe) {
+
+									title.textContent = swipe.swiper.slides[swipe.swiper.activeIndex].querySelector('.main-swiper__title').textContent;
+
+								}
 
 							}
-
 						}
-					}
-				});
+					});
+
+				}
 
 			}
 
@@ -170,6 +195,7 @@
 					mySwipe = new Swiper(swipe, {
 						loop: true,
 						pagination: {
+							clickable: true,
 							el: swipeNav,
 							bulletClass: 'button',
 							bulletActiveClass: 'is-active'

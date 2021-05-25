@@ -22,6 +22,12 @@
 
 @media ($mdWidth) {
 
+	:root {
+
+		--indent: 60px;
+
+	}
+
 	.hidden-md {
 
 		display: none !important;
@@ -36,19 +42,14 @@
 
 	.center {
 
-		width: 750px;
+		width: 720px;
+		padding: 0 var(--space);
 
 	}
 
 }
 
 @media ($smWidth) {
-
-	:root {
-
-		--indent: 18px;
-
-	}
 
 	.hidden-sm {
 
@@ -64,8 +65,7 @@
 
 	.center {
 
-		width: 560px;
-		padding: 0 20px;
+		width: 512px;
 
 	}
 
@@ -75,7 +75,8 @@
 
 	:root {
 
-		--indent: 10px;
+		--indent: 32px;
+		--space: 12px;
 
 	}
 
