@@ -44,3 +44,32 @@
 	});
 
 })(document.querySelectorAll('.form'));
+
+( form => {
+
+	if(!form) {
+
+		return;
+
+	}
+
+	form.addEventListener('change', () => {
+
+		form.classList.add('is-loading');
+
+		fetch(form.getAttribute('action'), {
+			method: 'POST',
+			body: new FormData(form)
+		})
+		.then(response => response.html())
+		.then(result => {
+
+			console.log(result);
+
+			form.classList.remove('is-loading');
+
+		});
+
+	});
+
+})(document.querySelector('.sort'));

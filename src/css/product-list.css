@@ -22,7 +22,7 @@
 	&__item {
 
 		margin: 18px 16px;
-		width: 384px;
+		width: calc( (100% - 32px * 3) / 3 );
 		display: flex;
 		flex-direction: column;
 		border-radius: 12px;
@@ -39,6 +39,8 @@
 		img {
 
 			border-radius: 12px 12px 0 0;
+			max-width: 100%;
+			height: auto;
 
 		}
 

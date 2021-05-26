@@ -1,12 +1,42 @@
 .main-swiper {
 
 	position: relative;
+	overflow: hidden;
 	padding: 167px 0 var(--indent);
+
+	&::after {
+
+		position: absolute;
+		width: 161px;
+		height: 796px;
+		top: 164px;
+		left: 50%;
+		margin-left: -90px;
+		content: '';
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='161' height='796' fill='%23FFE9F0' viewBox='0 0 161 796'%3E%3Cpath d='M0 530.73v-28.5l80.5-60.55 80.5 60.55v28.5l-80.5-60.55L0 530.73zM0 265.72v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 265.72zM0 707.4v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 707.4z'/%3E%3Cpath d='M0 442.4v-28.5l80.5-60.55L161 413.9v28.5l-80.5-60.56L0 442.4zM0 177.38v-28.5l80.5-60.54 80.5 60.55v28.5l-80.5-60.56L0 177.38zM0 619.07v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 558.5 0 619.07z'/%3E%3Cpath d='M0 354.06v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 293.5 0 354.06zM0 89.05v-28.5L80.5 0 161 60.55v28.5L80.5 28.5 0 89.05z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+
+		@media ($smWidth) {
+
+			width: 314px;
+			height: 72px;
+			top: 265px;
+			margin-left: -5px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='314' height='72' viewBox='0 0 314 72'%3E%3Cpath fill='%23FFE9F0' d='M78.27 0H90.9l26.82 35.66L90.9 71.33H78.27l26.83-35.67L78.27 0zM195.68 0h12.62l26.83 35.66-26.83 35.67h-12.62l26.83-35.67L195.68 0zM0 0h12.62l26.83 35.66-26.83 35.67H0l26.83-35.67L0 0z'/%3E%3Cpath fill='%23FFE9F0' d='M117.4 0h12.63l26.83 35.66-26.83 35.67h-12.62l26.83-35.67L117.4 0zM234.81 0h12.63l26.83 35.66-26.83 35.67h-12.63l26.83-35.67L234.82 0zM39.14 0h12.62l26.83 35.66-26.83 35.67H39.14l26.82-35.67L39.14 0z'/%3E%3Cpath fill='%23FFE9F0' d='M156.54 0h12.63L196 35.66l-26.83 35.67h-12.63l26.83-35.67L156.54 0zM273.95 0h12.63l26.82 35.66-26.82 35.67h-12.63l26.83-35.67L273.95 0z'/%3E%3C/svg%3E");
+
+		}
+
+	}
+
+	@media ($mdWidth) {
+
+		background-image: var(--grad);
+
+	}
 
 	@media ($smWidth) {
 
 		padding: 92px 0 16px;
-		background-image: var(--grad);
 
 	}
 
@@ -21,7 +51,7 @@
 		border-bottom-right-radius: 436px;
 		background-image: var(--grad);
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			display: none;
 
@@ -35,6 +65,12 @@
 		width: 1420px;
 		max-width: 100%;
 		margin: auto;
+
+		@media ($mdWidth) {
+
+			width: 1000px;
+
+		}
 
 		@media ($smWidth) {
 
@@ -65,21 +101,6 @@
 
 	}
 
-	.swiper-container {
-
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='796' viewBox='0 0 180 796'%3E%3Cmask id='a' width='161' height='708' x='0' y='0' maskUnits='userSpaceOnUse'%3E%3Cpath fill='%23000' d='M0 530.73v-28.5l80.5-60.55 80.5 60.55v28.5l-80.5-60.55L0 530.73zM0 265.72v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 265.72zM0 707.4v-28.5l80.5-60.55 80.5 60.56v28.5l-80.5-60.56L0 707.4z'/%3E%3Cpath fill='%23000' d='M0 442.4v-28.5l80.5-60.55L161 413.9v28.5l-80.5-60.56L0 442.4zM0 177.38v-28.5l80.5-60.54 80.5 60.55v28.5l-80.5-60.56L0 177.38zM0 619.07v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 558.5 0 619.07z'/%3E%3Cpath fill='%23000' d='M0 354.06v-28.5l80.5-60.55 80.5 60.55v28.5L80.5 293.5 0 354.06zM0 89.05v-28.5L80.5 0 161 60.55v28.5L80.5 28.5 0 89.05z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath fill='%23000' d='M0-3h161v799H0z'/%3E%3C/g%3E%3C/svg%3E");
-		background-position: top;
-		background-repeat: no-repeat;
-
-		@media ($smWidth) {
-
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='314' height='72' viewBox='0 0 314 72'%3E%3Cpath fill='%23FFE1EB' d='M78.27 0H90.9l26.82 35.66L90.9 71.33H78.27l26.83-35.67L78.27 0zM195.68 0h12.62l26.83 35.66-26.83 35.67h-12.62l26.83-35.67L195.68 0zM0 0h12.62l26.83 35.66-26.83 35.67H0l26.83-35.67L0 0z'/%3E%3Cpath fill='%23FFE1EB' d='M117.4 0h12.63l26.83 35.66-26.83 35.67h-12.62l26.83-35.67L117.4 0zM234.81 0h12.63l26.83 35.66-26.83 35.67h-12.63l26.83-35.67L234.82 0zM39.14 0h12.62l26.83 35.66-26.83 35.67H39.14l26.82-35.67L39.14 0z'/%3E%3Cpath fill='%23FFE1EB' d='M156.54 0h12.63L196 35.66l-26.83 35.67h-12.63l26.83-35.67L156.54 0zM273.95 0h12.63l26.82 35.66-26.82 35.67h-12.63l26.83-35.67L273.95 0z'/%3E%3C/svg%3E");
-			background-position: 175px 173px;
-
-		}
-
-	}
-
 	&__item {
 
 		display: flex;
@@ -100,6 +121,13 @@
 		width: 486px;
 		padding: 100px 0;
 
+		@media ($mdWidth) {
+
+			width: 50%;
+			padding: 50px 0;
+
+		}
+
 		@media ($smWidth) {
 
 			width: auto;
@@ -117,11 +145,10 @@
 
 		}
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
-			width: 147px;
-			flex-shrink: 0;
-			margin-left: 12px;
+			width: 50%;
+			padding-left: var(--space);
 
 			img {
 
@@ -133,6 +160,15 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 147px;
+			flex-shrink: 0;
+			margin-left: 12px;
+			padding: 0;
+
+		}
+
 	}
 
 	&__title {
@@ -141,6 +177,14 @@
 		font-size: 82px;
 		line-height: 99px;
 		margin-bottom: 28px;
+
+		@media ($mdWidth) {
+
+			font-size: 40px;
+			line-height: 56px;
+			margin-bottom: 20px;
+
+		}
 
 		@media ($smWidth) {
 
@@ -177,6 +221,14 @@
 		font-size: 21px;
 		line-height: 33px;
 		color: var(--light);
+
+		@media ($mdWidth) {
+
+			font-size: 18px;
+			line-height: 24px;
+			margin: 20px 0;
+
+		}
 
 		@media ($smWidth) {
 

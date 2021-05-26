@@ -63,55 +63,54 @@
 
 			toggleSwipe = () => {
 
-				toggleSwipe = false;
-
-				if( window.innerWidth < 768 && count == 1 ) {
-
-					return;
-
-				}
-
-				else if( window.innerWidth < 1250 && count < 3 ) {
-
-					return;
-
-				}
-
-				else if ( window.innerWidth >= 1250 && count <= 3 ) {
-
-					return;
-
-				}
+				resetSwipe();
 
 				swipe.parentNode.appendChild(swipeControls);
-
 				swipe.parentNode.classList.add('swiper-container-style');
+				swipeControls.classList.remove('hide');
 
-				new Swiper(swipe, {
-					loop: true,
-//					autoHeight: true,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					pagination: {
-						clickable: true,
-						el: swipeNav,
-						bulletClass: 'button',
-						bulletActiveClass: 'is-active'
-					},
-					breakpoints: {
-						320: {
-							slidesPerView: 1
-						},
-						768: {
-							slidesPerView: 2
-						},
-						1250: {
-							slidesPerView: 3
+				if( window.innerWidth < 768 ) {
+
+					swipeNav.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						pagination: {
+							clickable: true,
+							el: swipeNav,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
 						}
-					}
-				});
+					});
+
+
+				} else if( window.innerWidth < 1250 ) {
+
+					swipeBtns.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						slidesPerView: 2,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						}
+					});
+
+				} else {
+
+					swipeBtns.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						slidesPerView: 3,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						}
+					});
+
+				}
 
 			}
 

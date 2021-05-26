@@ -20,6 +20,16 @@
 
 }
 
+@media ($lgWidth) {
+
+	.center {
+
+		width: 1140px;
+
+	}
+
+}
+
 @media ($mdWidth) {
 
 	:root {
@@ -42,7 +52,7 @@
 
 	.center {
 
-		width: 720px;
+		width: 960px;
 		padding: 0 var(--space);
 
 	}
@@ -50,6 +60,12 @@
 }
 
 @media ($smWidth) {
+
+	:root {
+
+		--space: 16px;
+
+	}
 
 	.hidden-sm {
 

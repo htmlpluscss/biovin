@@ -65,10 +65,11 @@
 		a {
 
 			text-decoration: underline;
+			transition: var(--transitionDefault);
 
 			&:hover {
 
-				text-decoration: none;
+				text-decoration-color: transparent;
 
 			}
 

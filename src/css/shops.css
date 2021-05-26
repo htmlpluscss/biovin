@@ -2,7 +2,7 @@
 
 	overflow: hidden;
 
-	@media ($smWidth) {
+	@media ($mdWidth) {
 
 		position: relative;
 
@@ -28,7 +28,7 @@
 		display: flex;
 		justify-content: flex-end;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			justify-content: center;
 			padding: var(--indent) 0 44px;
@@ -47,7 +47,7 @@
 			border-bottom-right-radius: 436px;
 			content: '';
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				display: none;
 
@@ -63,7 +63,7 @@
 		padding-left: 30px;
 		position: relative;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: auto;
 			padding: 0;
@@ -82,7 +82,7 @@
 			content: '';
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='496' height='161' viewBox='0 0 496 161'%3E%3Cmask id='a' width='708' height='161' x='-212' y='0' maskUnits='userSpaceOnUse'%3E%3Cpath fill='%23FFE1EB' d='M-35 0h28.5l60.56 80.5L-6.5 161H-35l60.56-80.5L-34.99 0zM230.02 0h28.5l60.55 80.5L258.5 161h-28.5l60.56-80.5L230.02 0z'/%3E%3Cpath fill='%23FFE1EB' d='M53.34 0h28.5l60.55 80.5L81.84 161h-28.5l60.56-80.5L53.34 0zM318.35 0h28.5l60.55 80.5-60.55 80.5h-28.5l60.56-80.5L318.35 0z'/%3E%3Cpath fill='%23FFE1EB' d='M141.68 0h28.5l60.55 80.5-60.55 80.5h-28.5l60.55-80.5L141.68 0zM406.69 0h28.5l60.55 80.5-60.56 80.5H406.7l60.55-80.5L406.7 0z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath fill='%23FFE9F0' d='M498.74 0v161h-799V0z'/%3E%3C/g%3E%3C/svg%3E");
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				display: none;
 
@@ -96,15 +96,26 @@
 
 		margin-bottom: 30px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
-			margin-bottom: 13px;
 			text-align: center;
 
 			span {
 
-				font-size: 20px;
+				font-size: 28px;
 				line-height: 1.2;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin-bottom: 13px;
+
+			span {
+
+				font-size: 20px;
 
 			}
 
@@ -128,7 +139,7 @@
 		display: flex;
 		align-items: center;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			justify-content: space-between;
 
@@ -157,6 +168,37 @@
 			}
 
 		}
+
+	}
+
+	&__link {
+
+		@media ($desktop) {
+
+			&:hover {
+
+				animation: shop var(--transitionDefault);
+
+			}
+
+		}
+
+	}
+
+}
+
+@keyframes shop {
+
+	from {
+
+		filter: blur(5px);
+		opacity: 0;
+
+	}
+	to {
+
+		filter: blur(0);
+		opacity: 1;
 
 	}
 

@@ -4,7 +4,7 @@
 	position: relative;
 	background-image: var(--grad);
 
-	@media ($smWidth) {
+	@media ($mdWidth) {
 
 		.center {
 
@@ -18,9 +18,15 @@
 
 		padding: 70px 0;
 
+		@media ($mdWidth) {
+
+			padding-bottom: 30px;
+
+		}
+
 		@media ($smWidth) {
 
-			padding: 24px 0 44px;
+			padding: 24px 0 56px;
 			background-color: var(--pink_f);
 
 		}
@@ -88,15 +94,51 @@
 
 	&__col {
 
+		flex-basis: 40%;
+
+		&--contact {
+
+			flex-basis: 60%;
+			display: flex;
+			justify-content: space-between;
+
+			@media ($smWidth) {
+
+				flex-wrap: wrap;
+				max-width: 500px;
+				margin-top: 12px;
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			margin-bottom: 40px;
+
+		}
+
 		@media ($smWidth) {
 
-			margin-bottom: 24px;
+			margin-bottom: 0;
 
 		}
 
 	}
 
 	&__contact {
+
+		@media ($mdWidth) {
+
+			padding-right: var(--space);
+
+		}
+
+		@media ($smWidth) {
+
+			margin-top: 12px;
+
+		}
 
 		svg {
 
@@ -151,10 +193,11 @@
 
 			color: var(--med);
 			text-decoration: underline;
+			transition: var(--transitionDefault);
 
 			&:hover {
 
-				text-decoration: none;
+				text-decoration-color: transparent;
 
 			}
 
