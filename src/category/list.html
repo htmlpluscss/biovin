@@ -43,6 +43,9 @@
 
 				<picture>
 
+					<source srcset="/img/category/{{ item.img }}--656x656.webp" type="image/webp" media="(max-width: 360px)">
+					<source srcset="/img/category/{{ item.img }}--656x656.jpg" media="(max-width: 360px)">
+
 					<source srcset="/img/category/{{ item.img }}--384x384.webp 1x, /img/category/{{ item.img }}--768x768.webp 2x" type="image/webp">
 					<source srcset="/img/category/{{ item.img }}--384x384.jpg 1x, /img/category/{{ item.img }}--768x768.jpg 2x">
 

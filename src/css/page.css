@@ -2,6 +2,12 @@
 
 	margin: var(--indent) auto;
 
+	@media ($smWidth) {
+
+		margin-top: 40px;
+
+	}
+
 	.breadcrumbs + & {
 
 		margin-top: 0;
@@ -17,6 +23,12 @@
 	&__title {
 
 		margin: 52px 0;
+
+		@media ($smWidth) {
+
+			margin: 22px 0;
+
+		}
 
 	}
 

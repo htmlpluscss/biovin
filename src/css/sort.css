@@ -3,6 +3,14 @@
 	margin: 36px 0;
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
+
+	@media ($smWidth) {
+
+		margin: 18px 0;
+		justify-content: flex-end;
+
+	}
 
 	&__head {
 
@@ -11,13 +19,78 @@
 		line-height: 20px;
 		margin-right: 22px;
 
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
+
+	}
+
+	&__btn {
+
+		@media ($desktop) {
+
+			display: none;
+
+		}
+
+		@media ($mdWidth) {
+
+			display: flex;
+			align-items: flex-end;
+			font-size: 14px;
+			line-height: 20px;
+			color: var(--light);
+
+			svg {
+
+				fill: var(--light);
+				margin-left: 8px;
+
+			}
+
+		}
+
 	}
 
 	&__list {
 
-		display: flex;
-		flex-wrap: wrap;
-		margin: -11px;
+		@media ($desktop) {
+
+			display: flex;
+			flex-wrap: wrap;
+			margin: -11px;
+
+		}
+
+		@media ($mdWidth) {
+
+			position: absolute;
+			top: 100%;
+			z-index: 5;
+			right: 0;
+			padding: 8px 0px;
+			background-color: #fff;
+			box-shadow: 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+			border-radius: 3px;
+			transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+			opacity: 0;
+			pointer-events: none;
+
+		}
+
+	}
+
+	&--open &__list {
+
+		@media ($mdWidth) {
+
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate3d(0, 8px, 0);
+
+		}
 
 	}
 
@@ -37,35 +110,67 @@
 
 	&__item {
 
-		margin: 11px;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
-		position: relative;
-		cursor: pointer;
-		user-select: none;
+		@media ($desktop) {
+
+			margin: 11px;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 20px;
+			position: relative;
+			cursor: pointer;
+			user-select: none;
+
+		}
+
+		@media ($mdWidth) {
+
+			font-size: 14px;
+			line-height: 20px;
+			color: var(--med);
+			position: relative;
+			display: block;
+
+		}
 
 	}
 
 	&__input[type="radio"]:checked + &__label {
 
-		--med: var(--pink);
-		pointer-events: none;
+		@media ($desktop) {
+
+			--med: var(--pink);
+			pointer-events: none;
+
+		}
+
+		@media ($mdWidth) {
+
+			color: var(--color);
+			background-color: var(--pink_l);
+
+		}
 
 	}
 
 	&__label {
 
-		display: block;
-		color: var(--med);
-
 		@media ($desktop) {
+
+			display: block;
+			color: var(--med);
 
 			&:hover {
 
 				--med: var(--color);
 
 			}
+
+		}
+
+		@media ($mdWidth) {
+
+			display: block;
+			padding: 6px 16px;
 
 		}
 

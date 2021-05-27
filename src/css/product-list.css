@@ -4,6 +4,13 @@
 	flex-wrap: wrap;
 	margin: -18px -16px;
 
+	@media ($smWidth) {
+
+		display: block;
+		margin: 0;
+
+	}
+
 	.swiper-cards & {
 
 		margin: 0;
@@ -29,12 +36,25 @@
 		position: relative;
 		box-shadow: 4px 0 4px rgba(155, 155, 184, 0.08), 0 4px 4px rgba(155, 155, 184, 0.08), 0 0 49px rgba(155, 155, 184, 0.16);
 
+		@media ($smWidth) {
+
+			margin: 16px 0;
+			width: auto;
+
+		}
+
 	}
 
 	&__img {
 
 		height: 384px;
 		flex-shrink: 0;
+
+		@media ($smWidth) {
+
+			height: auto;
+
+		}
 
 		img {
 
@@ -125,6 +145,12 @@
 		padding: 0 10px;
 		border: 2px solid var(--pink_f);
 		border-radius: 6px;
+
+		@media ($smWidth) {
+
+			margin-left: auto;
+
+			}
 
 	}
 
