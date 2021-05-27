@@ -99,10 +99,27 @@
 		margin-left: auto;
 		height: 20px;
 
+		@media ($mdWidth) {
+
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 48%;
+
+		}
+
 		.checkbox-dropdown {
 
 			margin-top: -10px;
 			width: 314px;
+
+			@media ($mdWidth) {
+
+				margin: 0;
+				width: 100%;
+
+			}
 
 		}
 
@@ -180,6 +197,19 @@
 
 		padding-left: 24px;
 		font-weight: 400;
+
+		@media ($mdWidth) {
+
+			padding-left: 40px;
+
+			&::before {
+
+				left: 16px;
+				top: 10px;
+
+			}
+
+		}
 
 		&::before {
 

@@ -9,6 +9,12 @@
 	position: relative;
 	padding: 243px 0 var(--indent);
 
+	@media ($mdWidth) {
+
+		padding-top: 200px;
+
+	}
+
 	&::before {
 
 		position: absolute;
@@ -35,6 +41,12 @@
 		display: flex;
 		align-items: center;
 		color: var(--light);
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -84,6 +96,13 @@
 		flex-wrap: wrap;
 		margin: -16px;
 
+		@media ($smWidth) {
+
+			margin: 0;
+			display: block;
+
+		}
+
 	}
 
 	&__item {
@@ -93,6 +112,20 @@
 		padding: 46px 50px 48px 50px;
 		box-shadow: 4px 0px 4px rgba(155, 155, 184, 0.08), 0px 4px 4px rgba(155, 155, 184, 0.08), 0px 0px 49px rgba(155, 155, 184, 0.16);
 		border-radius: 12px;
+
+		@media ($mdWidth) {
+
+			padding: 24px;
+
+		}
+
+		@media ($smWidth) {
+
+			padding: 20px;
+			margin: 16px 0;
+			width: auto;
+
+		}
 
 	}
 
