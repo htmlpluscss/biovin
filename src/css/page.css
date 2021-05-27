@@ -8,13 +8,13 @@
 
 	}
 
-	.breadcrumbs + & {
+	.breadcrumbs ~ & {
 
 		margin-top: 0;
 
 	}
 
-	.breadcrumbs + & &__title {
+	.breadcrumbs ~ & &__title {
 
 		margin: 0;
 
@@ -37,6 +37,12 @@
 		display: flex;
 		align-items: center;
 		margin: 12px 0;
+
+		@media ($smWidth) {
+
+			margin: 6px 0;
+
+		}
 
 	}
 
@@ -118,5 +124,12 @@
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 24px;
+
+	@media ($smWidth) {
+
+		font-size: 14px;
+		line-height: 1.2;
+
+	}
 
 }

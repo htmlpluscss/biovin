@@ -4,7 +4,7 @@
 
 	@media ($smWidth) {
 
-		margin: 24px 0;
+		margin: 14px 0;
 
 	}
 
@@ -12,36 +12,33 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 16px;
-		line-height: 1.2;
-		color: var(--light);
 
 	}
 
 	&__item {
 
-		a {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1.2;
 
-			color: inherit;
+		@media ($smWidth) {
+
+			font-size: 12px;
+			margin: 6px 0;
 
 		}
 
 		&::after {
 
-			margin: 0 8px 0 5px;
+			margin: 0 8px;
 			content: '—';
 			font-weight: 600;
+			color: var(--light);
 
 		}
 
 		&:last-child {
-
-			a {
-
-				cursor: text;
-				text-decoration: none;
-
-			}
 
 			&::after {
 
@@ -50,6 +47,20 @@
 			}
 
 		}
+
+	}
+
+	&__item:last-child &__link {
+
+		cursor: text;
+		text-decoration: none;
+
+	}
+
+	&__link {
+
+		color: var(--light);
+		text-decoration: underline;
 
 	}
 

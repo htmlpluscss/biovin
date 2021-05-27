@@ -6,7 +6,7 @@
 	@media ($smWidth) {
 
 		padding-bottom: 30px;
-		margin-bottom: 20px;
+		margin: 0 calc(var(--space) * -1) 20px;
 
 	}
 
@@ -67,23 +67,29 @@
 		@media ($smWidth) {
 
 			width: 100%;
-			padding: 16px 46px;
+			padding: 16px var(--space);
 
-			&.swiper-slide {
+			.review-swiper {
 
-				transition: var(--transitionDefault);
+				padding: 16px 46px;
 
-				&.swiper-slide-prev {
+				&.swiper-slide {
 
-					filter: blur(1px);
-					transform: scale(.9) translate3d(100px, 0, 0);
+					transition: var(--transitionDefault);
 
-				}
+					&.swiper-slide-prev {
 
-				&.swiper-slide-next {
+						filter: blur(1px);
+						transform: scale(.9) translate3d(100px, 0, 0);
 
-					filter: blur(1px);
-					transform: scale(.9) translate3d(-100px, 0, 0);
+					}
+
+					&.swiper-slide-next {
+
+						filter: blur(1px);
+						transform: scale(.9) translate3d(-100px, 0, 0);
+
+					}
 
 				}
 
@@ -93,19 +99,23 @@
 
 		@media ($xsWidth) {
 
-			padding: 16px 26px;
+			.review-swiper {
 
-			&.swiper-slide {
+				padding: 16px 26px;
 
-				&.swiper-slide-prev {
+				&.swiper-slide {
 
-					transform: scale(.9) translate3d(60px, 0, 0);
+					&.swiper-slide-prev {
 
-				}
+						transform: scale(.9) translate3d(60px, 0, 0);
 
-				&.swiper-slide-next {
+					}
 
-					transform: scale(.9) translate3d(-60px, 0, 0);
+					&.swiper-slide-next {
+
+						transform: scale(.9) translate3d(-60px, 0, 0);
+
+					}
 
 				}
 

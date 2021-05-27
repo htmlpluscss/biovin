@@ -103,7 +103,7 @@
 
 			<dl class="param__list">
 
-				<div class="param__item">
+				<div class="param__item{% if item.value.length > 20 %} param__item--big{% endif %}">
 
 					<dt class="param__dt">
 						{{ item.key }}

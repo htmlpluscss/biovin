@@ -30,3 +30,23 @@
 	}
 
 })(document.querySelector('.product-gallery'));
+
+( product => {
+
+	if (product && 'IntersectionObserver' in window) {
+
+		const btn = product.querySelector('.product__shops');
+
+		const callback = (entries, observer) => {
+
+			Array.from(entries, entry => btn.classList.toggle('is-hide', entry.isIntersecting));
+
+		};
+
+		const observer = new IntersectionObserver(callback);
+
+		observer.observe(document.querySelector('.footer'));
+
+	}
+
+})(document.querySelector('.product'));
