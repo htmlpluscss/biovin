@@ -186,8 +186,7 @@ legend {
 
 	&:-webkit-autofill {
 
-		animation-name: autofill;
-		animation-fill-mode: both;
+		box-shadow: inset 0 0 0 100px #fff;
 
 	}
 
@@ -221,18 +220,6 @@ legend {
 	}
 
 }
-
-@keyframes autofill {
-
-	to {
-
-		color: var(--color);
-		background-color: #fff;
-
-	}
-
-}
-
 
 .checkbox {
 

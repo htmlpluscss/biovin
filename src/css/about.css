@@ -15,6 +15,13 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding-top: 116px;
+		background-image: var(--grad);
+
+	}
+
 	&::before {
 
 		position: absolute;
@@ -26,11 +33,23 @@
 		border-bottom-right-radius: 270px;
 		background-image: var(--grad);
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 	}
 
 	&__title {
 
 		margin-bottom: 30px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 18px;
+
+		}
 
 	}
 
@@ -45,6 +64,8 @@
 		@media ($smWidth) {
 
 			display: block;
+			font-size: 14px;
+			line-height: 23px;
 
 		}
 
@@ -53,6 +74,9 @@
 	&__text {
 
 		width: 630px;
+		max-width: 100%;
+		position: relative;
+		z-index: 1;
 
 	}
 
@@ -61,6 +85,33 @@
 		margin-left: 70px;
 		flex-shrink: 0;
 		position: relative;
+
+		@media ($smWidth) {
+
+			position: absolute;
+			right: 36px;
+			bottom: -36px;
+			margin: 0;
+
+			img {
+
+				width: 120px;
+				height: auto;
+
+			}
+
+			&::before {
+
+				position: absolute;
+				width: 354px;
+				height: 72px;
+				left: -60px;
+				background-size: contain;
+				background-repeat: no-repeat;
+
+			}
+
+		}
 
 		&::before {
 
@@ -87,6 +138,13 @@
 	&__title {
 
 		margin-bottom: 36px;
+		color: var(--light);
+
+		@media ($smWidth) {
+
+			margin-bottom: 24px;
+
+		}
 
 	}
 
@@ -112,6 +170,7 @@
 		padding: 46px 50px 48px 50px;
 		box-shadow: 4px 0px 4px rgba(155, 155, 184, 0.08), 0px 4px 4px rgba(155, 155, 184, 0.08), 0px 0px 49px rgba(155, 155, 184, 0.16);
 		border-radius: 12px;
+		background-color: #fff;
 
 		@media ($mdWidth) {
 
@@ -121,9 +180,16 @@
 
 		@media ($smWidth) {
 
-			padding: 20px;
+			padding: 40px 20px;
 			margin: 16px 0;
 			width: auto;
+
+			img {
+
+				width: 38px;
+				height: 38px;
+
+			}
 
 		}
 
@@ -133,6 +199,13 @@
 
 		margin: 27px 0 5px;
 
+		@media ($smWidth) {
+
+			margin: 18px 0 10px;
+			font-size: 16px;
+
+		}
+
 	}
 
 	p, ul {
@@ -141,6 +214,37 @@
 		line-height: 1.4;
 		color: var(--light);
 		max-width: 500px;
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+
+		}
+
+		li {
+
+			padding-left: 14px;
+
+			&::before {
+
+				position: absolute;
+				width: 4px;
+				height: 4px;
+				top: 10px;
+				left: 0;
+				content: '';
+				background-color: var(--light);
+				border-radius: 50%;
+
+				@media ($smWidth) {
+
+					top: 7px;
+
+				}
+
+			}
+
+		}
 
 	}
 

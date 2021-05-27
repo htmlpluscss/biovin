@@ -69,7 +69,7 @@
 			width: 100%;
 			padding: 16px var(--space);
 
-			.review-swiper {
+			.review-swiper & {
 
 				padding: 16px 46px;
 
@@ -99,7 +99,7 @@
 
 		@media ($xsWidth) {
 
-			.review-swiper {
+			.review-swiper & {
 
 				padding: 16px 26px;
 
