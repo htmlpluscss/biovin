@@ -6,9 +6,7 @@
 
 	}
 
-	const currentValue = form.querySelector('.sort__current');
-
-	form.addEventListener('change', event => {
+	form.addEventListener('change', () => {
 
 		form.classList.add('is-loading');
 
@@ -24,12 +22,6 @@
 			form.classList.remove('is-loading');
 
 		});
-
-		if(event.target.classList.contains('sort__input')) {
-
-			currentValue.textContent = event.target.nextElementSibling.textContent;
-
-		}
 
 	});
 
