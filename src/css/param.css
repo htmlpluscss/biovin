@@ -1,6 +1,7 @@
 .param {
 
 	margin: 80px 0;
+	scroll-margin: calc(var(--indent) / 2);
 
 	@media ($mdWidth) {
 

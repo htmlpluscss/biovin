@@ -80,8 +80,7 @@ legend {
 
 		&:hover {
 
-			/* color: var(--color); */
-			/* background-color: var(--ligth); */
+			background-color: #f888ae;
 
 		}
 
@@ -107,7 +106,7 @@ legend {
 
 			&:hover {
 
-				/* background-color: var(--ligth); */
+				background-color: #ffcadb;
 
 			}
 
