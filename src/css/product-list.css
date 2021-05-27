@@ -36,6 +36,12 @@
 		position: relative;
 		box-shadow: 4px 0 4px rgba(155, 155, 184, 0.08), 0 4px 4px rgba(155, 155, 184, 0.08), 0 0 49px rgba(155, 155, 184, 0.16);
 
+		@media ($mdWidth) {
+
+			width: calc( (100% - 32px * 2) / 2 );
+
+		}
+
 		@media ($smWidth) {
 
 			margin: 16px 0;
@@ -50,9 +56,15 @@
 		height: 384px;
 		flex-shrink: 0;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			height: auto;
+
+			img {
+
+				width: 100%;
+
+			}
 
 		}
 
@@ -150,7 +162,7 @@
 
 			margin-left: auto;
 
-			}
+		}
 
 	}
 
