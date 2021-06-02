@@ -152,6 +152,9 @@
 							nextEl: swipeNext,
 							prevEl: swipePrev
 						},
+						autoplay: {
+							delay: 5000
+						},
 						on: {
 							progress : () => {
 

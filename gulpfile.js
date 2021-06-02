@@ -202,3 +202,18 @@ gulp.task('default', gulp.series(
 	'copy',
 	gulp.parallel('ftp','watch','serve')
 	));
+
+
+gulp.task('bitrix', function () {
+
+	return gulp.src([
+		'build/js/scripts.js',
+		'build/js/scripts.min.js',
+		'build/css/styles.css',
+		'build/css/styles.min.css'
+		])
+		.pipe(replace("/fonts/", "/bitrix/templates/biovin/fonts/"))
+		.pipe(replace("/js/", "/bitrix/templates/biovin/js/"))
+		.pipe(gulp.dest('min'))
+
+});
