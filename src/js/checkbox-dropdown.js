@@ -104,7 +104,7 @@
 
 					arrow.classList.remove('hide');
 					reset.classList.add('hide');
-					btn.textContent = textChecked;
+					btn.innerHTML = '<span class="checkbox-dropdown__btn-ellipsis">' + textChecked + '</span>';
 					el.classList.add('checkbox-dropdown--checked');
 
 				}

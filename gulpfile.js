@@ -204,7 +204,7 @@ gulp.task('default', gulp.series(
 	));
 
 
-gulp.task('bitrix', function () {
+gulp.task('bitrix', () => {
 
 	return gulp.src([
 		'build/js/scripts.js',

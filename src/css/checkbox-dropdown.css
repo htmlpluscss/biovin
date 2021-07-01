@@ -23,6 +23,14 @@
 
 		}
 
+		&-ellipsis {
+
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+
+		}
+
 	}
 
 	&--checked &__btn {

@@ -4,8 +4,6 @@
 	padding: 0;
 	box-sizing: border-box;
 
-	/* color: red !important */
-
 }
 
 html {
@@ -32,8 +30,7 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-/* background-image: url(/css/1.png); */
-background-position: center 0px;
+
 }
 
 a {
